@@ -115,7 +115,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center space-x-5">
           {Socials.map((social) => (
-            <a href={social.url} target="_blank">
+            <a href={social.url} target="_blank" key={social.name}>
             <Image
               src={social.src}
               alt={social.name}

@@ -52,6 +52,8 @@ const CardSuscribete: React.FC<CardSuscribeteProps> = ({ width = '52', height = 
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       style={{
+        width: `${width}px`,
+        height: `${height}px`,
         transform: `perspective(1000px) scale3d(1, 1, 1)`,
         transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
       }}
