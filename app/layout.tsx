@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito_sans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  title: "SonolaSR",
+  description: "Canal de YT SonolaSR",
+    icons:{
+      icon:["/favicon.ico"],
+      apple:["/apple-touch-icon.png"],
+      shortcut:["/apple-touch-icon.png"]
+    }
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({children}: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+        className={`${nunito_sans.className} bg-[#1c1c1c] overflow-y-scroll overflow-x-hidden`}
       >
-        <StarsCanvas />
         <Navbar />
         {children}
         <Footer />

@@ -1,0 +1,69 @@
+import React, { MouseEvent, useCallback } from 'react';
+import Image from 'next/image';
+
+interface CardSuscribeteProps {
+  width?: string; 
+  height?: string; 
+  src: string; 
+  alt: string; 
+  channelUrl: string; 
+}
+
+function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let lastCall = 0;
+  return (...args: Parameters<T>) => {
+    const now = new Date().getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return func(...args);
+  };
+}
+
+const CardSuscribete: React.FC<CardSuscribeteProps> = ({ width = '52', height = '52', src, alt, channelUrl }) => {
+  const onMouseMove = useCallback(
+    throttle((e: MouseEvent<HTMLDivElement>) => {
+      const card = e.currentTarget;
+      const box = card.getBoundingClientRect();
+      const x = e.clientX - box.left;
+      const y = e.clientY - box.top;
+      const centerX = box.width / 2;
+      const centerY = box.height / 2;
+      const rotateX = (y - centerY) / 30;
+      const rotateY = (centerX - x) / 30;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    }, 100),
+    []
+  );
+
+  const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  };
+
+  return (
+    <div
+      className={`relative h-${height} w-${width} overflow-hidden rounded-xl border border-gray-800 p-[3px] backdrop-blur-3xl`}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{
+        transform: `perspective(1000px) scale3d(1, 1, 1)`,
+        transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
+      }}
+    >
+      <a href={channelUrl} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
+        <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00FF00_0%,#008000_50%,#00FF00_100%)]' />
+        <div className='relative h-full w-full items-center justify-center rounded-xl'>
+          <Image src={src} alt={alt} width={1000} height={429} className="rounded-xl" />
+        </div>
+      </a>
+    </div>
+  );
+};
+
+export default CardSuscribete;

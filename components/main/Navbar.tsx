@@ -1,56 +1,163 @@
+"use client"
+
 import { Socials } from "@/constants";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  slideInFromLeft,
+  slideInFromRight,
+  slideInFromTop,
+} from "@/utils/motion";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+    const yOffset = -80;
+    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
-          href="#about-me"
-          className="h-auto w-auto flex flex-row items-center"
-        >
-          <Image
-            src="/NavLogo.png"
-            alt="logo"
-            width={70}
-            height={70}
-            className="cursor-pointer hover:animate-slowspin"
-          />
+    <div className="w-full h-24 fixed top-0 bg-gradient-to-b from-transparent to-[#0e3d21a1] backdrop-blur-md shadow-lg z-50 px-5">
+      <div className="w-full h-full flex items-center justify-between mx-auto px-4 md:px-6">
+        <div className="hidden md:flex items-center md:space-x-2">
+          <a
+            href="#descripcion"
+            className="flex items-center" onClick={(e) => handleLinkClick(e, 'descripcion')}
+          >
+            <Image
+              src="/sonolasr.webp"
+              alt="logo"
+              width={70}
+              height={70}
+              className=" hover:rotate-180 transform transition-transform duration-500 rounded-full"
+            />
+          </a>
+        </div>
 
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            WebChain Dev
-          </span>
-        </a>
+        <div className="flex md:hidden items-center justify-center flex-grow">
+          <a
+            href="#descripcion"
+            className="flex items-center" onClick={(e) => handleLinkClick(e, 'descripcion')}
+          >
+            <Image
+              src="/sonolasr.webp"
+              alt="logo"
+              width={70}
+              height={70}
+              className=" hover:rotate-180 transform transition-transform duration-500 rounded-full"
+            />
+            <span className="ml-1 md:block text-white font-black text-3xl">
+              SonolaSR
+            </span>
+          </a>
+        </div>
 
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer">
-              About me
+        <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-5">
+          <div className="flex items-center justify-between w-full h-auto border border-[#1cb6619b] bg-[#0e3d21a1] px-5 py-2.5 rounded-full text-white">
+            <a href="#descripcion" className=" font-semibold text-sm hover:text-green-400 transform hover:scale-110 transition duration-200"
+            onClick={(e) => handleLinkClick(e, 'descripcion')}>
+              DESCRIPCION
             </a>
-            <a href="#skills" className="cursor-pointer">
-              Skills
+            <a href="#suscribete" className=" font-semibold text-sm hover:text-green-400 transform hover:scale-110 transition duration-200"
+            onClick={(e) => handleLinkClick(e, 'suscribete')}>
+              SUSCRIBETE
             </a>
-            <a href="#projects" className="cursor-pointer">
-              Projects
+            <a href="#video" className=" font-semibold text-sm hover:text-green-400 transform hover:scale-110 transition duration-200"
+            onClick={(e) => handleLinkClick(e, 'video')}>
+              VIDEOS
             </a>
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
+        <button
+          className="flex flex-col w-12 border-0 bg-transparent gap-3.5 md:hidden"
+          onClick={toggleMenu}
+        >
+          <div className={`bg-green-600 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? "rotate-45" : ""}`}></div>
+          <div className={`bg-green-600 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? "opacity-0" : ""}`}></div>
+          <div className={`bg-green-600 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? "-rotate-45" : ""}`}></div>
+        </button>
+
+        <div className="hidden md:flex items-center space-x-5">
           {Socials.map((social) => (
+            <a href={social.url} target="_blank">
             <Image
               src={social.src}
               alt={social.name}
               key={social.name}
-              width={24}
-              height={24}
+              width={social.size.width}
+              height={social.size.height}
+              className=" hover:opacity-80 transition duration-200"
             />
+            </a>
           ))}
         </div>
       </div>
+      
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            ref={menuRef}
+            key="mobile-menu"
+            variants={slideInFromTop}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="absolute right-2 top-24 w-40 bg-[#0e3d21a1] border border-[#1cb6619b] rounded-lg text-white md:hidden"
+          >
+            <div className="flex flex-col items-center">
+              <a href="#descripcion" className=" font-semibold text-sm py-2 hover:text-green-400 transform hover:scale-105 transition duration-200" 
+                onClick={(e) => { handleLinkClick(e, 'descripcion'); closeMenu(); }}>
+                DESCRIPCION
+              </a>
+              <a href="#suscribete" className=" font-semibold text-sm py-2 hover:text-green-400 transform hover:scale-105 transition duration-200" 
+                onClick={(e) => { handleLinkClick(e, 'suscribete'); closeMenu(); }}>
+                SUSCRIBETE
+              </a>
+              <a href="#video" className=" font-semibold text-sm py-2 hover:text-green-400 transform hover:scale-105 transition duration-200" 
+                onClick={(e) => { handleLinkClick(e, 'video'); closeMenu(); }}>
+                VIDEOS
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
-
 export default Navbar;
