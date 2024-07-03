@@ -1,12 +1,12 @@
 import React, { MouseEvent, useCallback } from 'react';
 import Image from 'next/image';
 
-interface CardSuscribeteProps {
+interface MarketCardProps {
   width?: string; 
   height?: string; 
   src: string; 
   alt: string; 
-  channelUrl: string; 
+  LinkMarket: string; 
 }
 
 function throttle<T extends (...args: any[]) => any>(
@@ -24,7 +24,7 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-const CardSuscribete: React.FC<CardSuscribeteProps> = ({ width = '52', height = '52', src, alt, channelUrl }) => {
+const MarketCard: React.FC<MarketCardProps> = ({ width = '1', height = '1', src, alt, LinkMarket }) => {
   const onMouseMove = useCallback(
     throttle((e: MouseEvent<HTMLDivElement>) => {
       const card = e.currentTarget;
@@ -33,8 +33,8 @@ const CardSuscribete: React.FC<CardSuscribeteProps> = ({ width = '52', height = 
       const y = e.clientY - box.top;
       const centerX = box.width / 2;
       const centerY = box.height / 2;
-      const rotateX = (y - centerY) / 30;
-      const rotateY = (centerX - x) / 30;
+      const rotateX = (y - centerY) / 150;
+      const rotateY = (centerX - x) / 150;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     }, 100),
@@ -56,14 +56,14 @@ const CardSuscribete: React.FC<CardSuscribeteProps> = ({ width = '52', height = 
         transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
       }}
     >
-      <a href={channelUrl} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
-        <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00FF00_0%,#008000_50%,#00FF00_100%)]' />
+      <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
+        <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#094293_0%,#0000ff_50%,#1d1d86_100%)]'/>
         <div className='relative h-full w-full items-center justify-center rounded-xl'>
-          <Image src={src} alt={alt} width={1000} height={429} className="rounded-xl" />
+          <Image src={src} alt={alt} width={1100} height={500} className="rounded-xl" />
         </div>
       </a>
     </div>
   );
 };
 
-export default CardSuscribete;
+export default MarketCard;

@@ -1,15 +1,15 @@
 export const Socials = [
   {
-    name: "YouTube",
-    src: "/youtube.svg",
-    url: "https://youtube.com/@SonolaSR",
-    size: { width: 40, height: 40 }
+    name: "Tienda",
+    src: "tienda.svg",
+    url: "https://transquim.com",
+    size: { width: 30, height: 30 }
   },
   {
-    name: "Instagram",
-    src: "/instagram.svg",
-    url: "https://instagram.com/sonolasr",
-    size: { width: 29, height: 29 }
+    name: "Carrito",
+    src: "carrito.svg",
+    url: "https://transquim.com/collections/all",
+    size: { width: 30, height: 30 }
   },
 ];
 
