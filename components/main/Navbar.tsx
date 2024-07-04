@@ -116,7 +116,7 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <button className="flex flex-col w-11 border-0 bg-transparent gap-3 md:hidden" onClick={toggleMenu}>
+          <button className="flex flex-col w-12 bg-transparent gap-3.5 md:hidden" onClick={toggleMenu}>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'rotate-45' : ''}`}></div>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'opacity-0' : ''}`}></div>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? '-rotate-45' : ''}`}></div>
@@ -148,7 +148,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="absolute right-2 top-20 w-40 bg-[#ff8000] border border-[#763919] rounded-xl text-white md:hidden"
+              className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden"
             >
               <nav className="flex flex-col items-center">
                 <a href="#inicio" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
