@@ -116,7 +116,7 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <button className="flex flex-col w-12 border-0 bg-transparent gap-3.5 md:hidden" onClick={toggleMenu}>
+          <button className="flex flex-col w-11 border-0 bg-transparent gap-3 md:hidden" onClick={toggleMenu}>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'rotate-45' : ''}`}></div>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'opacity-0' : ''}`}></div>
             <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? '-rotate-45' : ''}`}></div>
