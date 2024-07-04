@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full h-20 fixed top-0 transition-colors duration-500 z-50 px-5 ${
+        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 px-5 ${
           hasScrolled ? 'bg-[#ff8000] backdrop-blur-md shadow-lg' : 'bg-transparent'
         }`}
       >
@@ -77,7 +77,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex md:hidden items-center justify-between w-full">
-              <ThemeToggle setTheme={setTheme} /> 
+            <ThemeToggle setTheme={setTheme} /> 
             <a href="#inicio" className="flex items-center justify-center flex-grow" onClick={(e) => handleLinkClick(e, 'inicio')}>
               <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
             </a>
@@ -87,28 +87,28 @@ const Navbar = () => {
             <nav className="flex items-center justify-between w-full h-auto px-5 text-gray-950 dark:text-gray-50">
               <a
                 href="#inicio"
-                className="font-semibold text-sm hover:text-blue-700 transform hover:scale-110 transition duration-200"
+                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
                 onClick={(e) => handleLinkClick(e, 'inicio')}
               >
                 INICIO
               </a>
               <a
                 href="#market"
-                className="font-semibold text-sm hover:text-blue-700 transform hover:scale-110 transition duration-200"
+                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
                 onClick={(e) => handleLinkClick(e, 'market')}
               >
                 MARKET
               </a>
               <a
                 href="#ubicacion"
-                className="font-semibold text-sm hover:text-blue-700 transform hover:scale-110 transition duration-200"
+                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
                 onClick={(e) => handleLinkClick(e, 'ubicacion')}
               >
                 UBICACIÓN
               </a>
               <a
                 href="#contacto"
-                className="font-semibold text-sm hover:text-blue-700 transform hover:scale-110 transition duration-200"
+                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
                 onClick={(e) => handleLinkClick(e, 'contacto')}
               >
                 CONTACTO
@@ -117,16 +117,16 @@ const Navbar = () => {
           </div>
 
           <button className="flex flex-col w-12 border-0 bg-transparent gap-3.5 md:hidden" onClick={toggleMenu}>
-            <div className={`bg-blue-950 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'rotate-45' : ''}`}></div>
-            <div className={`bg-blue-950 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`bg-blue-950 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? '-rotate-45' : ''}`}></div>
+            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'rotate-45' : ''}`}></div>
+            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? '-rotate-45' : ''}`}></div>
           </button>
 
           <div className="hidden md:flex items-center space-x-5">
             {Socials.map((social) => (
               <a href={social.url} target="_blank" key={social.name}>
                 <Image
-                  src={theme === 'dark' ? `/svg/dark-${social.src}` : `/svg/light-${social.src}`}
+                  src={theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
                   alt={social.name}
                   key={social.name}
                   width={social.size.width}
@@ -151,16 +151,16 @@ const Navbar = () => {
               className="absolute right-2 top-20 w-40 bg-[#ff8000] border border-[#763919] rounded-xl text-white md:hidden"
             >
               <nav className="flex flex-col items-center">
-                <a href="#inicio" className="font-semibold text-sm py-2 hover:text-blue-700 transform hover:scale-105 transition duration-200" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
+                <a href="#inicio" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
                   INICIO
                 </a>
-                <a href="#market" className="font-semibold text-sm py-2 hover:text-blue-700 transform hover:scale-105 transition duration-200" onClick={(e) => { handleLinkClick(e, 'market'); closeMenu(); }}>
+                <a href="#market" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'market'); closeMenu(); }}>
                   MARKET
                 </a>
-                <a href="#ubicacion" className="font-semibold text-sm py-2 hover:text-blue-700 transform hover:scale-105 transition duration-200" onClick={(e) => { handleLinkClick(e, 'ubicacion'); closeMenu(); }}>
+                <a href="#ubicacion" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'ubicacion'); closeMenu(); }}>
                   UBICACIÓN
                 </a>
-                <a href="#contacto" className="font-semibold text-sm py-2 hover:text-blue-700 transform hover:scale-105 transition duration-200" onClick={(e) => { handleLinkClick(e, 'contacto'); closeMenu(); }}>
+                <a href="#contacto" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'contacto'); closeMenu(); }}>
                   CONTACTO
                 </a>
               </nav>

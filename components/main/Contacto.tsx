@@ -30,9 +30,6 @@ const Contacto = () => {
               <a href="https://www.linkedin.com/company/transformaciones-qu%C3%ADmicas-del-per%C3%BA-sac" target="_blank" rel="noopener noreferrer">
                 <Image src="/svg/linkedin.svg" alt="linkedin" width={30} height={30}/>
               </a>
-              <a href="https://youtube.com/@slenderperu" target="_blank" rel="noopener noreferrer">
-                <Image src="/svg/youtube.svg" alt="youtube" width={30} height={30}/>
-              </a>
             </div>
           </div>
         </div>

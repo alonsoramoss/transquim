@@ -8,6 +8,9 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
         if (currentTheme === 'dark') {
             setIsDarkMode(true);
             setTheme('dark');
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
     }, [setTheme]);
     
@@ -16,8 +19,12 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
         setIsDarkMode(!isDarkMode);
         localStorage.setItem('theme', newTheme);
         setTheme(newTheme);
-        
-        document.documentElement.classList.toggle('dark', isDarkMode);
+
+        if (!isDarkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
     };
 
     return (
@@ -27,8 +34,8 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
                 onClick={toggleTheme}
             >
                 <img
-                    src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'}
-                    alt={isDarkMode ? 'Modo claro' : 'Modo oscuro'}
+                    src={isDarkMode ? '/svg/luna.svg' : '/svg/sol.svg'}
+                    alt={isDarkMode ? 'Modo oscuro' : 'Modo claro'}
                     className="w-6 h-6"
                 />
             </button>
