@@ -23,9 +23,6 @@ const Navbar = () => {
 
   const handleToggleMenu = () => {
     toggleMenu(); 
-    if (isMenuOpen) {
-      closeMenu(); 
-    }
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
