@@ -14,7 +14,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
 
   const closeMenu = () => {
@@ -116,10 +116,10 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <button className="flex flex-col w-10 bg-transparent gap-3 md:hidden" onClick={toggleMenu}>
-            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'rotate-45 translate-y-0.5' : ''}`}></div>
-            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`bg-blue-700 h-0.5 w-full rounded transition-all duration-500 transform origin-left ${isMenuOpen ? '-rotate-45' : ''}`}></div>
+          <button className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
+            <span className={`absolute bg-blue-700 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform rotate-45 top-1/2' : 'top-2'}`}></span>
+            <span className={`absolute bg-blue-700 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'opacity-0' : 'top-1/2'}`}></span>
+            <span className={`absolute bg-blue-700 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform -rotate-45 top-1/2' : 'top-8'}`}></span>
           </button>
 
           <div className="hidden md:flex items-center space-x-5">
