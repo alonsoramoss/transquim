@@ -7,13 +7,14 @@ const Contacto = () => {
       <h1 className="text-[30px] mb-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
         Contáctanos
       </h1>
-      <div className="max-w-[1100px] w-full">
+      <div className="max-w-[1150px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div>
-            <p>📞 (01) 381 - 4246 <br /> 
-            📱 +51 936 572 969 <br />
-            ✉️ transformaciones@slenderperu.com
-            </p>
+              📞 (01) 381 - 4246 <br /> 
+              📱 +51 936 572 969 <br />
+              <a href="mailto:transformaciones@slenderperu.com">
+                ✉️ transformaciones@slenderperu.com
+              </a>
           </div>
           <div>
             <p>Para compras al por mayor, contactarse con +51 991 282 997</p>
@@ -34,9 +35,9 @@ const Contacto = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-14 font-bold text-green-600">
+      <div className="text-center pt-14 font-bold text-green-600">
         ¡Envíos en Lima y a todo el Perú! 🛍️
-        </div>
+      </div>
     </div>
   );
 };
