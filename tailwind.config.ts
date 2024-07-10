@@ -14,10 +14,11 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-        "animation": {
-          "border-width": "border-width 3s infinite alternate"
+        animation: {
+          "border-width": "border-width 3s infinite alternate",
+          'infinite-scroll': 'infinite-scroll 30s linear infinite',
         },
-        "keyframes": {
+        keyframes: {
           "border-width": {
             "from": {
               "width": "10px",
@@ -27,8 +28,12 @@ const config: Config = {
               "width": "200px",
               "opacity": "1"
             }
-          }
-      }
+          },
+          'infinite-scroll': {
+            from: { transform: 'translateX(0)' },
+            to: { transform: 'translateX(-50%)' },
+          },
+      },
     },
   },
   plugins: [],
