@@ -150,8 +150,8 @@ const Navbar = () => {
               exit="hidden"
               className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden"
             >
-              <nav className="flex flex-col items-center">
-                <a href="#inicio" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
+              <nav className="flex flex-col items-center text-gray-950 dark:text-gray-50">
+                <a href="#inicio" className="font-semibold text-sm pt-4 pb-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
                   INICIO
                 </a>
                 <a href="#market" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'market'); closeMenu(); }}>
@@ -164,6 +164,20 @@ const Navbar = () => {
                   CONTACTO
                 </a>
               </nav>
+              <div className="flex py-4 justify-center">
+                {Socials.map((social) => (
+                  <a href={social.url} target="_blank" key={social.name} className='mx-3'>
+                    <Image
+                      src={theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
+                      alt={social.name}
+                      key={social.name}
+                      width={social.size.width}
+                      height={social.size.height}
+                      className="hover:opacity-80 transition duration-200"
+                    />
+                  </a>
+                ))}
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
