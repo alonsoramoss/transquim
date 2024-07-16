@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="text-sm md:text-base">
                     <div className="flex items-center justify-between">
                         <div className="max-w-52 md:max-w-full">
-                            &copy; {currentYear} Transformaciones Químicas del Perú S.A.C.
+                            &copy; {currentYear} Transformaciones Químicas del Perú
                         </div>
                         <div>
                             <a href="#inicio" className="underline">
