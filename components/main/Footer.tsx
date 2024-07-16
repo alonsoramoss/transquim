@@ -11,7 +11,7 @@ const Footer = () => {
                             &copy; {currentYear} Transformaciones Químicas del Perú
                         </div>
                         <div>
-                            <a href="/" className="underline">
+                            <a href="#inicio" className="underline">
                                 Ir a Inicio
                             </a>
                         </div>
