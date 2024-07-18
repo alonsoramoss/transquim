@@ -34,9 +34,7 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
                 onClick={toggleTheme}
             >
                 <img
-                    src={isDarkMode ? '/svg/luna.svg' : '/svg/sol.svg'}
-                    alt={isDarkMode ? 'Modo oscuro' : 'Modo claro'}
-                    className="w-6 h-6"
+                    src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'}
                 />
             </button>
         </div>

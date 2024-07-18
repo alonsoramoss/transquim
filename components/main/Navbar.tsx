@@ -71,16 +71,18 @@ const Navbar = () => {
       >
         <div className="w-full h-full flex items-center justify-between mx-auto">
           <div className="hidden md:flex items-center md:space-x-2">
-            <a href="/" className="flex items-center" onClick={(e) => handleLinkClick(e, 'inicio')}>
+            <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}>
               <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
             </a>
           </div>
 
           <div className="flex md:hidden items-center justify-between w-full">
-            <ThemeToggle setTheme={setTheme} /> 
-            <a href="/" className="flex items-center justify-center flex-grow" onClick={(e) => handleLinkClick(e, 'inicio')}>
-              <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
-            </a>
+            <ThemeToggle setTheme={setTheme}/>
+            <div className="flex items-center justify-center flex-grow">
+              <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}>
+                <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
+              </a>
+            </div>
           </div>
 
           <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-5">
