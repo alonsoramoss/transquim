@@ -22,7 +22,7 @@ export default function RootLayout({children}: {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden`}
+        className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}
       >
       <div
         className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-50 dark:bg-neutral-950
@@ -30,7 +30,9 @@ export default function RootLayout({children}: {
       >
       </div>
         <Navbar />
-        {children}
+        <div className="flex-grow">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
