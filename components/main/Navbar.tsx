@@ -71,7 +71,7 @@ const Navbar = () => {
       >
         <div className="w-full h-full flex items-center justify-between mx-auto">
           <div className="hidden md:flex items-center md:space-x-2">
-            <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}>
+            <a href="/">
               <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
             </a>
           </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
           <div className="flex md:hidden items-center justify-between w-full">
             <ThemeToggle setTheme={setTheme}/>
             <div className="flex items-center justify-center flex-grow">
-              <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}>
+              <a href="/">
                 <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
               </a>
             </div>
