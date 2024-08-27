@@ -25,9 +25,9 @@ const AppWhatsApp = () => {
       {showMessage && (
         <div className= "absolute right-0 bottom-9 mb-3 p-3 bg-white text-sm rounded-md shadow-2xl w-40 border border-gray-300">
           <div className="flex justify-between items-center">
-            <span className='text-black'>¿Necesitas más información? Contáctanos!</span>
-            <button onClick={handleCloseMessage} className="ml-2 text-white">
-              <p className='text-gray-950 pb-10'>&#10005;</p>
+            <span className="text-black">¿Necesitas más información? Contáctanos!</span>
+            <button onClick={handleCloseMessage} className="ml-2 pb-10 text-black">
+              &#10005;
             </button>
           </div>
         </div>
