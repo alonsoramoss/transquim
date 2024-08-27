@@ -4,7 +4,7 @@ const Ubicacion = () => {
   return (
     <div className="flex flex-col items-center text-center px-5 pt-10 pb-5" id="ubicacion">
       <h1 className="text-[30px] mb-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
-        Nuestra ubicación
+        Ubicación
       </h1>
       <div className="flex flex-wrap items-center justify-center w-full mx-auto max-w-[1200px]">
         <div className="w-full md:w-1/3 text-center items-center font-semibold">
