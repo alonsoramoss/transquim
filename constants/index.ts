@@ -6,7 +6,7 @@ export const Socials = [
     size: { width: 30, height: 30 }
   },
   {
-    name: "Carrito",
+    name: "Productos",
     src: "carrito.svg",
     url: "https://transquim.com/collections/all",
     size: { width: 30, height: 30 }

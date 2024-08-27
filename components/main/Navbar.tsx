@@ -126,7 +126,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-5">
             {Socials.map((social) => (
-              <a href={social.url} target="_blank" key={social.name}>
+              <a href={social.url} target="_blank" key={social.name} className="relative group">
                 <Image
                   src={theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
                   alt={social.name}
@@ -135,6 +135,9 @@ const Navbar = () => {
                   height={social.size.height}
                   className="hover:opacity-80 transition duration-200"
                 />
+                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
+                  {social.name}
+                </span>
               </a>
             ))}
             <ThemeToggle setTheme={setTheme} />
@@ -168,7 +171,7 @@ const Navbar = () => {
               </nav>
               <div className="flex py-4 justify-center">
                 {Socials.map((social) => (
-                  <a href={social.url} target="_blank" key={social.name} className='mx-3'>
+                  <a href={social.url} target="_blank" key={social.name} className='relative group mx-3'>
                     <Image
                       src={theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
                       alt={social.name}
@@ -177,6 +180,9 @@ const Navbar = () => {
                       height={social.size.height}
                       className="hover:opacity-80 transition duration-200"
                     />
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
+                      {social.name}
+                    </span>
                   </a>
                 ))}
               </div>
