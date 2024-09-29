@@ -16,7 +16,7 @@ const Footer = () => {
       };
 
     return (
-        <div className="w-full bg-[#ff6600] text-black dark:text-white font-semibold dark:font-normal py-12 border-t-4 border-orange-900">
+        <div className="w-full bg-[#ff6600] text-black dark:text-white py-12 border-t-4 border-orange-900">
             <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-sm md:text-base">
                     <div className="flex items-center justify-between">
