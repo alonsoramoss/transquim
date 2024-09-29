@@ -14,7 +14,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(true);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const closeMenu = () => {
@@ -118,7 +118,7 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <button className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
+          <button className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu} onTouchStart={toggleMenu}>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform rotate-45 top-1/2' : 'top-2'}`}></span>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'opacity-0' : 'top-1/2'}`}></span>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform -rotate-45 top-1/2' : 'top-8'}`}></span>
