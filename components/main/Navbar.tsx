@@ -12,6 +12,7 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [theme, setTheme] = useState('light'); 
   const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -34,7 +35,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node) &&
+          buttonRef.current &&!buttonRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
@@ -118,7 +120,9 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <button className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu} onTouchStart={toggleMenu}>
+          <button
+            ref={buttonRef}
+            className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform rotate-45 top-1/2' : 'top-2'}`}></span>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'opacity-0' : 'top-1/2'}`}></span>
             <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? 'transform -rotate-45 top-1/2' : 'top-8'}`}></span>
