@@ -8,7 +8,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Transformaciones Químicas del Perú",
-  description: "Transformaciones Químicas del Perú S.A.C",
+  description: "Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
     icons:{
       icon:["/favicon.ico?v=4"],
       apple:["/apple-touch-icon.png?v=4"],
