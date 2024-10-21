@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const AppWhatsApp = () => {
+const WhatsApp = () => {
   const [showMessage, setShowMessage] = useState(true);
   const whatsappMensaje = encodeURIComponent("¡Hola! Estoy interesado/a en los productos de TRANSQUIM. ¿Podrían brindarme más información?");
 
@@ -36,4 +36,4 @@ const AppWhatsApp = () => {
   );
 };
 
-export default AppWhatsApp;
+export default WhatsApp;
