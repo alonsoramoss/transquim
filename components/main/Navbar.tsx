@@ -91,28 +91,28 @@ const Navbar = () => {
             <nav className="flex items-center justify-between w-full h-auto px-5 text-gray-950 dark:text-gray-50">
               <a
                 href="#inicio"
-                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
+                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
                 onClick={(e) => handleLinkClick(e, 'inicio')}
               >
                 INICIO
               </a>
               <a
                 href="#market"
-                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
+                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
                 onClick={(e) => handleLinkClick(e, 'market')}
               >
                 MARKET
               </a>
               <a
                 href="#ubicacion"
-                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
+                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
                 onClick={(e) => handleLinkClick(e, 'ubicacion')}
               >
                 UBICACIÓN
               </a>
               <a
                 href="#contacto"
-                className="font-semibold text-sm hover:text-blue-700 hover:underline transition duration-200"
+                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
                 onClick={(e) => handleLinkClick(e, 'contacto')}
               >
                 CONTACTO
