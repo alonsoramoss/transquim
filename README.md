@@ -1,2 +1,3 @@
-## Página Web de Transformaciones Químicas del Perú
-Realizado con Next.js utilizando TypeScript y Tailwind CSS
+# Página web de TRANSQUIM
+
+Realizado en Next.js utilizando TypeScript y Tailwind CSS.
