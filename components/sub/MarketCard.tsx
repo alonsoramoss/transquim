@@ -24,7 +24,7 @@ function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-const MarketCard: React.FC<MarketCardProps> = ({ width = '1', height = '1', src, alt, LinkMarket }) => {
+const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMarket }) => {
   const onMouseMove = useCallback(
     throttle((e: MouseEvent<HTMLDivElement>) => {
       const card = e.currentTarget;
@@ -48,7 +48,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width = '1', height = '1', src,
 
   return (
     <div
-      className={`relative h-${height} w-${width} overflow-hidden rounded-xl border border-gray-800 p-[3px] backdrop-blur-3xl`}
+      className={`relative h-${height} w-${width} overflow-hidden rounded-2xl border border-neutral-400 dark:border-neutral-800 p-[3px] backdrop-blur-3xl`}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       style={{
@@ -59,7 +59,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width = '1', height = '1', src,
       <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
         <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4912a1_0%,#0000ff_50%,#0b1260_100%)]'/>
         <div className='relative h-full w-full items-center justify-center rounded-xl'>
-          <Image src={src} alt={alt} width={1200} height={500} className="rounded-xl" />
+          <Image src={src} alt={alt} width={2000} height={1000} className="rounded-xl" />
         </div>
       </a>
     </div>

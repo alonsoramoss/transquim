@@ -30,7 +30,7 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
     return (
         <div>
             <button
-                className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+                className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800"
                 onClick={toggleTheme}
             >
                 <img

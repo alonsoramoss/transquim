@@ -10,29 +10,35 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+
       },
-        animation: {
-          "border-width": "border-width 3s infinite alternate",
-          'infinite-scroll': 'infinite-scroll 30s linear infinite',
+      animation: {
+        'fade-in-down': 'fade-in-down 1s ease-out',
+        'fade-in-up': 'fade-in-up 1s ease-out 0.5s backwards',
+        'fadeIn': 'fadeIn 0.5s ease-out',
+        'shake': 'shake 2s ease-in-out infinite',
+      },
+      keyframes: {
+        'fade-in-down': {
+          '0%': { opacity: '0', transform: 'translateY(-2rem)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        keyframes: {
-          "border-width": {
-            "from": {
-              "width": "10px",
-              "opacity": "0"
-            },
-            "to": {
-              "width": "200px",
-              "opacity": "1"
-            }
-          },
-          'infinite-scroll': {
-            from: { transform: 'translateX(0)' },
-            to: { transform: 'translateX(-50%)' },
-          },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(2rem)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fadeIn': {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'shake': {
+          '0%': { transform: 'translateX(0)' },
+          '10%': { transform: 'translateX(-2px)' },
+          '20%': { transform: 'translateX(2px)' },
+          '30%': { transform: 'translateX(-2px)' },
+          '40%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
     },
   },

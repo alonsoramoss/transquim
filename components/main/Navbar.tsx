@@ -6,7 +6,9 @@ import Image from 'next/image';
 import { Socials } from '@/constants';
 import ThemeToggle from './ThemeToggle';
 import { slideInFromTop } from '@/utils/motion';
+import { Sora } from "next/font/google";
 
+const sora = Sora({ subsets: ["latin"] });
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -74,7 +76,7 @@ const Navbar = () => {
         <div className="w-full h-full flex items-center justify-between mx-auto">
           <div className="hidden md:flex items-center md:space-x-2">
             <a href="/">
-              <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
+              <Image src="/img/transquim.webp" alt="logo" width={60} height={60}/>
             </a>
           </div>
 
@@ -82,39 +84,23 @@ const Navbar = () => {
             <ThemeToggle setTheme={setTheme}/>
             <div className="flex items-center justify-center flex-grow">
               <a href="/">
-                <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className={theme === 'dark' ? 'icon-dark' : 'icon-light'}/>
+                <Image src="/img/transquim.webp" alt="logo" width={60} height={60}/>
               </a>
             </div>
           </div>
 
-          <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-5">
-            <nav className="flex items-center justify-between w-full h-auto px-5 text-gray-950 dark:text-gray-50">
-              <a
-                href="#inicio"
-                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
-                onClick={(e) => handleLinkClick(e, 'inicio')}
-              >
+          <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
+            <nav className={`${sora.className} flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === 'dark' ? 'text-neutral-50' : 'text-neutral-950') : 'text-neutral-50'}`}>
+              <a href="#inicio" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, 'inicio')}>
                 INICIO
               </a>
-              <a
-                href="#market"
-                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
-                onClick={(e) => handleLinkClick(e, 'market')}
-              >
+              <a href="#market" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, 'market')}>
                 MARKET
               </a>
-              <a
-                href="#ubicacion"
-                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
-                onClick={(e) => handleLinkClick(e, 'ubicacion')}
-              >
+              <a href="#ubicacion" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, 'ubicacion')}>
                 UBICACIÓN
               </a>
-              <a
-                href="#contacto"
-                className="font-semibold text-sm transition duration-0 hover:duration-200 hover:text-blue-700 hover:underline"
-                onClick={(e) => handleLinkClick(e, 'contacto')}
-              >
+              <a href="#contacto" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, 'contacto')}>
                 CONTACTO
               </a>
             </nav>
@@ -131,8 +117,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-5">
             {Socials.map((social) => (
               <a href={social.url} target="_blank" key={social.name} className="relative group">
-                <Image
-                  src={theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
+                <Image 
+                  src={hasScrolled ? theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}` : `/svg/light-${social.src}`}
                   alt={social.name}
                   key={social.name}
                   width={social.size.width}
@@ -159,17 +145,17 @@ const Navbar = () => {
               exit="hidden"
               className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden"
             >
-              <nav className="flex flex-col items-center text-gray-950 dark:text-gray-50">
-                <a href="#inicio" className="font-semibold text-sm pt-4 pb-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
+              <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
+                <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, 'inicio'); closeMenu(); }}>
                   INICIO
                 </a>
-                <a href="#market" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'market'); closeMenu(); }}>
+                <a href="#market" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, 'market'); closeMenu(); }}>
                   MARKET
                 </a>
-                <a href="#ubicacion" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'ubicacion'); closeMenu(); }}>
+                <a href="#ubicacion" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, 'ubicacion'); closeMenu(); }}>
                   UBICACIÓN
                 </a>
-                <a href="#contacto" className="font-semibold text-sm py-2 hover:text-blue-700 hover:underline" onClick={(e) => { handleLinkClick(e, 'contacto'); closeMenu(); }}>
+                <a href="#contacto" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, 'contacto'); closeMenu(); }}>
                   CONTACTO
                 </a>
               </nav>

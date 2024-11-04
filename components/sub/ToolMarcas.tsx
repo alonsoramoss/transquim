@@ -3,53 +3,61 @@ import { v4 as uuid } from 'uuid'
 export interface IDevToolsElement {
     id: string
 	href: string
+    alt: string
+    className?: string
 	src: string
 	width: string
     height: string
-	className?: string
 }
 
 export const DevTools: IDevToolsElement[] = [
     {
         id: uuid(),
         href: "https://transquim.com/collections/alessi",
-        src: "/img/alessi.webp",
+        alt: "Alessi - Alcoholes, jabones y productos de limpieza",
+        src: "/img/marcas/alessi.webp",
         width: "550",
-        height: "400", 
+        height: "400",
     },
     {
         id: uuid(),
         href: "https://transquim.com/collections/slender",
-        src: "/img/slender.webp",
+        alt: "Slender - Productos saludables para un estilo de vida sano",
+        src: "/img/marcas/slender.webp",
         width: "550",
-        height: "400", 
+        height: "400",
     },
     {
         id: uuid(),
         href: "https://transquim.com/collections/chocolateria-yara",
-        src: "/img/yara.webp",
+        alt: "Yara - Chocolate peruano con cacao orgánico fino de aroma",
+        src: "/img/marcas/yara.webp",
         width: "550",
-        height: "400", 
-    },
-    {
-        id: uuid(),
-        href: "https://transquim.com/collections/insumos-agronomos",
-        src: "/img/bioflux.webp",
-        width: "550",
-        height: "400", 
+        height: "400",
     },
     {
         id: uuid(),
         href: "https://transquim.com/collections/slender-gel-reforzado",
-        src: "/img/slender2.webp",
+        alt: "Slender Gel Reforzado - Gel tonificante que refresca y humecta la piel",
+        src: "/img/marcas/slender2.webp",
         width: "550",
-        height: "400", 
+        height: "400",
     },
     {
         id: uuid(),
         href: "https://transquim.com/collections/ecovibe",
-        src: "/img/ecovibe.webp",
+        alt: "Ecovibe - Gel de ecografía y ultrasonido, no alergénico y fácil de aplicar",
+        src: "/img/marcas/ecovibe.webp",
         width: "550",
-        height: "400", 
+        height: "400",
     },
-]
+    {
+        id: uuid(),
+        href: "https://transquim.com/collections/insumos-agronomos",
+        alt: "Bioflux - Agroquímicos y soluciones de tratamiento de aguas residuales",
+        src: "/img/marcas/bioflux.webp",
+        width: "550",
+        height: "400",
+    },
+];
+

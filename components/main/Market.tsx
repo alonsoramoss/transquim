@@ -3,19 +3,22 @@
 import React from 'react';
 import MarketCard from '../sub/MarketCard';
 import MarketButton from '../sub/MarketButton';
+import { Sora } from "next/font/google";
 
+const sora = Sora({ subsets: ["latin"] });
 const Suscribete = () => {
   const linkMarket = 'https://transquim.com';
 
   return (
-    <div className="flex flex-col items-center text-center px-5 pt-10 pb-5" id="market">
-      <h1 className="text-[30px] mb-3 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
-        Tienda Online
+    <div className="flex flex-col items-center text-center py-10 md:py-20" id="market">
+      <h1 className={`${sora.className} text-3xl md:text-5xl font-extrabold text-green-700 dark:text-lime-400`}>
+        ¡VISITA NUESTRA TIENDA ONLINE!
       </h1>
-      <div className="max-w-[1500px]">
+      <div className="h-1 w-16 my-8 bg-teal-500 animate-pulse rounded" />
+      <div className="max-w-[1500px] px-5">
         <MarketCard src="/img/market.webp" alt="TRANSQUIM Market" LinkMarket={linkMarket}/>
       </div>
-      <div className="mt-6 w-44 text-sm">
+      <div className="mt-6 text-sm md:text-lg">
         <MarketButton onClick={() => window.open(linkMarket, '_blank')}>
         ¡IR A TIENDA!
         </MarketButton>

@@ -21,7 +21,7 @@ const MarketButton: React.FC<MarketButtonProps> = ({ children, onClick }) => {
 
   return (
     <button
-      className='relative inline-flex h-12 w-full items-center justify-center rounded-xl bg-gray-400 font-bold text-gray-950 '
+      className='relative inline-flex h-12 w-44 md:h-14 md:w-48 items-center justify-center rounded-xl bg-neutral-400 font-bold text-neutral-950 '
       onClick={onClick}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
