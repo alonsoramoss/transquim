@@ -6,7 +6,7 @@ import { Sora } from "next/font/google";
 const sora = Sora({ subsets: ["latin"] });
 const Contacto = () => {
   return (
-    <div className="flex flex-col md:items-center md:py-20" id="contacto">
+    <div className="flex flex-col md:items-center pt-10 md:py-20" id="contacto">
       <div className="px-0 md:px-5">
         <article className="flex flex-col bg-gradient-to-r from-[#eb8657] to-[#d0ac7a] dark:from-[#a15633] dark:to-[#b87e2d] py-10 md:py-10 items-center md:relative md:rounded-2xl">
           <CoolBackground />

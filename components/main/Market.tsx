@@ -14,7 +14,7 @@ const Suscribete = () => {
       <h1 className={`${sora.className} text-3xl md:text-5xl font-extrabold text-green-700 dark:text-lime-400`}>
         ¡VISITA NUESTRA TIENDA ONLINE!
       </h1>
-      <div className="h-1 w-16 my-8 bg-teal-500 animate-pulse rounded" />
+      <div className="h-1 w-16 my-4 md:my-8 bg-teal-500 animate-pulse rounded" />
       <div className="max-w-[1500px] px-5">
         <MarketCard src="/img/market.webp" alt="TRANSQUIM Market" LinkMarket={linkMarket}/>
       </div>
