@@ -40,15 +40,15 @@ export default function Component() {
   }
 
   return (
-    <div className='py-20'>
-      <article className="bg-gradient-to-t from-[#278074] to-[#0a0f67] dark:from-[#38b1a1] dark:to-[#070d76] py-16">
+    <div className='flex flex-col items-center py-20 px-0 md:px-5'>
+      <article className="bg-gradient-to-t from-[#278074] to-[#0a0f67] dark:from-[#38b1a1] dark:to-[#070d76] py-10 md:py-16 w-full max-w-[1460px] md:rounded-2xl">
         <h1 className={`${sora.className} text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600`}>
           MARCAS
         </h1>
         <p className='text-lg md:text-xl font-bold text-center text-white py-8'>
           ¡Explora nuestras marcas y productos!
         </p>
-        <div className='max-w-[1500px] mx-auto px-11 relative'>
+        <div className='max-w-[1500px] w-full px-11'>
           <Slider {...settings}>
             {DevTools.map((tool: IDevToolsElement) => (
               <div key={tool.id} className='px-2'>
