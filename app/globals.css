@@ -28,6 +28,10 @@ html {
   background: #9d9d9d;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b;
+}
+
 .card-item {
   position: relative;
   display: flex;
