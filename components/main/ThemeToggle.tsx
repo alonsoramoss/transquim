@@ -28,16 +28,13 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
     };
 
     return (
-        <div>
-            <button
-                className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800"
-                onClick={toggleTheme}
-            >
-                <img
-                    src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'}
-                />
-            </button>
-        </div>
+<div>
+    <button aria-label="Cambiar tema" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800" onClick={toggleTheme}>
+        <img alt="Cambiar tema" src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'} />
+    </button>
+</div>
+
+
     );
 };
 
