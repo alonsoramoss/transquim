@@ -16,20 +16,24 @@ html {
   background-color: #0059a6
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar-track {
+  background: #1f2530;
 }
 
-::-webkit-scrollbar-track {
-  background: #2e2e2f;
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9d9d9d;
+  border-radius: 10px;
+  background-color: #DDDDDD;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #6b6b6b;
+::-webkit-scrollbar-thumb:active {
+  background-color: #666666;
 }
 
 .card-item {
