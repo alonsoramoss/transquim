@@ -4,6 +4,7 @@ import "./globals.css";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({children}: {
         <Navbar />
         <div className="flex-grow">
           {children}
+          <SpeedInsights />
         </div>
         <Footer />
       </body>
