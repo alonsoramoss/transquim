@@ -32,7 +32,7 @@ export default function Component() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 800,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,

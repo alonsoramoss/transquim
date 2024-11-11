@@ -9,7 +9,7 @@ const WhatsApp = () => {
   const whatsappMensaje = encodeURIComponent("¡Hola! Estoy interesado/a en los productos de TRANSQUIM. ¿Podrían brindarme más información?");
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowMessage(true), 2000)
+    const timer = setTimeout(() => setShowMessage(true), 3000)
     return () => clearTimeout(timer)
   }, [])
 
