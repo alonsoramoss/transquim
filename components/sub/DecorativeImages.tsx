@@ -3,25 +3,20 @@
 import { useState, useEffect } from 'react';
 
 function DecorativeImages() {
-  // Lista de clases de Tailwind para las posiciones de las imágenes
   const positions: string[] = [
-    'top-[15%] left-[10%]',   // Posición 1
-    'top-[45%] left-[3%]',    // Posición 2
-    'bottom-[15%] left-[15%]',// Posición 3
-    'top-[30%] right-[10%]',  // Posición 4
-    'bottom-[35%] right-[5%]',// Posición 5
+    'top-[15%] left-[10%]',
+    'top-[45%] left-[3%]',
+    'bottom-[15%] left-[15%]',
+    'top-[30%] right-[10%]',
+    'bottom-[35%] right-[5%]',
   ];
 
-  // Estado para almacenar las clases asignadas a cada imagen
   const [imageClasses, setImageClasses] = useState<string[]>([]);
 
-  // Función para obtener clases aleatorias
   const getRandomClasses = (): string[] => {
-    // Baraja las posiciones y selecciona las primeras 5 posiciones (una para cada imagen)
     return positions.sort(() => Math.random() - 0.5).slice(0, 5);
   };
 
-  // Cambiar clases al cargar el componente o recargar la página
   useEffect(() => {
     setImageClasses(getRandomClasses());
   }, []);
