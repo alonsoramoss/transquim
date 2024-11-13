@@ -11,7 +11,7 @@ const Suscribete = () => {
 
   return (
     <div className="flex flex-col items-center text-center py-10 md:py-20" id="market">
-      <h1 className={`${sora.className} text-3xl md:text-5xl font-extrabold text-green-700 dark:text-lime-400`}>
+      <h1 className={`${sora.className} text-3xl md:text-5xl px-5 md:px-10 font-extrabold text-green-700 dark:text-lime-400`}>
         ¡VISITA NUESTRA TIENDA ONLINE!
       </h1>
       <div className="h-1 w-16 my-4 md:my-8 bg-teal-500 animate-pulse rounded" />
