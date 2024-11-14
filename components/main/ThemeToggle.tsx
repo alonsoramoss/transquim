@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
     useEffect(() => {
         const currentTheme = localStorage.getItem('theme');
@@ -10,17 +10,19 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
             setTheme('dark');
             document.documentElement.classList.add('dark');
         } else {
+            setIsDarkMode(false);
+            setTheme('light');
             document.documentElement.classList.remove('dark');
         }
     }, [setTheme]);
-    
+
     const toggleTheme = () => {
         const newTheme = isDarkMode ? 'light' : 'dark';
-        setIsDarkMode(!isDarkMode);
+        setIsDarkMode(prevState => !prevState);
         localStorage.setItem('theme', newTheme);
         setTheme(newTheme);
 
-        if (!isDarkMode) {
+        if (newTheme === 'dark') {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
@@ -28,13 +30,11 @@ const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
     };
 
     return (
-<div>
-    <button aria-label="Cambiar tema" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800" onClick={toggleTheme}>
-        <img alt="Cambiar tema" src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'} />
-    </button>
-</div>
-
-
+        <div>
+            <button aria-label="Cambiar tema" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800" onClick={toggleTheme}>
+                <img alt="Cambiar tema" src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'}/>
+            </button>
+        </div>
     );
 };
 
