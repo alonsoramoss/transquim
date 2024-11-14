@@ -9,6 +9,7 @@ import { slideInFromTop } from '@/utils/motion';
 import { Sora } from "next/font/google";
 
 const sora = Sora({ subsets: ["latin"] });
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -36,9 +37,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const savedScrollState = sessionStorage.getItem('hasScrolled');
+    if (savedScrollState === 'true') {
+      setHasScrolled(true);
+    }
+
     const handleOutsideClick = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node) &&
-          buttonRef.current &&!buttonRef.current.contains(event.target as Node)) {
+          buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
@@ -56,7 +62,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 0);
+      if (window.scrollY > 0) {
+        if (!hasScrolled) {
+          setHasScrolled(true);
+          sessionStorage.setItem('hasScrolled', 'true');
+        }
+      } else {
+        if (hasScrolled) {
+          setHasScrolled(false);
+          sessionStorage.setItem('hasScrolled', 'false');
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -64,15 +80,12 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [hasScrolled]);
 
   return (
     <>
       <div
-        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 px-5 ${
-          hasScrolled ? 'bg-[#ff8000] backdrop-blur-md shadow-lg' : 'bg-transparent'
-        }`}
-      >
+        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 px-5 ${hasScrolled ? 'bg-[#ff8000] backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="w-full h-full flex items-center justify-between mx-auto">
           <div className="hidden md:flex items-center md:space-x-2">
             <a href="/">
