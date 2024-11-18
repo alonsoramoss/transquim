@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
+import { useTheme } from 'next-themes';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { Socials } from '@/constants';
@@ -13,7 +14,7 @@ const sora = Sora({ subsets: ["latin"] });
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [theme, setTheme] = useState('light'); 
+  const { theme } = useTheme();
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -94,7 +95,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex md:hidden items-center justify-between w-full">
-            <ThemeToggle setTheme={setTheme}/>
+            <ThemeToggle/>
             <div className="flex items-center justify-center flex-grow">
               <a href="/">
                 <Image src="/img/transquim.webp" alt="logo" width={60} height={60}/>
@@ -129,21 +130,23 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-5">
             {Socials.map((social) => (
-              <a href={social.url} target="_blank" key={social.name} className="relative group">
-                <Image 
-                  src={hasScrolled ? theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}` : `/svg/light-${social.src}`}
-                  alt={social.name}
-                  key={social.name}
-                  width={social.size.width}
-                  height={social.size.height}
-                  className="hover:opacity-80 transition duration-200"
-                />
+              <div key={social.name} className="relative group">
+                <a href={social.url} target="_blank" key={social.name} className="relative group">
+                  <Image 
+                    src={hasScrolled ? theme === 'dark' ? `/svg/light-${social.src}` : `/svg/dark-${social.src}` : `/svg/light-${social.src}`}
+                    alt={social.name}
+                    key={social.name}
+                    width={social.size.width}
+                    height={social.size.height}
+                    className="hover:opacity-80 transition duration-200"
+                  />
+                </a>
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
                   {social.name}
                 </span>
-              </a>
+              </div>
             ))}
-            <ThemeToggle setTheme={setTheme} />
+            <ThemeToggle/>
           </div>
         </div>
 

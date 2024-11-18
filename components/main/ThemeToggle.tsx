@@ -1,39 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import { IoSunny, IoMoon } from "react-icons/io5";
 
-const ThemeToggle = ({ setTheme }: { setTheme: (theme: string) => void }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+const ThemeToggle = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    useEffect(() => {
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
-            setIsDarkMode(true);
-            setTheme('dark');
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [setTheme]);
-    
-    const toggleTheme = () => {
-        const newTheme = isDarkMode ? 'light' : 'dark';
-        setIsDarkMode(!isDarkMode);
-        localStorage.setItem('theme', newTheme);
-        setTheme(newTheme);
+  if (!mounted) return null;
 
-        if (!isDarkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    };
+  const isDarkMode = theme === 'dark';
 
-    return (
-        <div>
-            <button aria-label="Cambiar tema" className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800" onClick={toggleTheme}>
-                <img alt="Cambiar tema" src={isDarkMode ? '/svg/sol.svg' : '/svg/luna.svg'} />
-            </button>
-        </div>
-    );
+  const toggleTheme = () => {
+    setTheme(isDarkMode ? 'light' : 'dark');
+  };
+
+  return (
+    <div>
+      <button
+        title={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+        className="p-2 rounded-full bg-neutral-800 dark:bg-neutral-200 text-lg"
+        onClick={toggleTheme}>
+        {isDarkMode ? (
+          <IoMoon className="text-white dark:text-black"/>
+        ) : (
+          <IoSunny className="text-white dark:text-black"/>
+        )}
+      </button>
+    </div>
+  );
 };
 
 export default ThemeToggle;
