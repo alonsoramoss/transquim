@@ -74,9 +74,7 @@ export default function HeroUpContent() {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-16 md:bottom-28 left-1/2 transform -translate-x-1/2">
         <DownArrow />
-        </div>
       </div>
     </div>
   )
