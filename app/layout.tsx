@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
+import { ThemeProvider } from "next-themes";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Footer from "@/components/main/Footer";
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -18,26 +19,22 @@ export const metadata: Metadata = {
     }
 };
 
-export default function RootLayout({children}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}
-      >
-      <div
-        className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-50 dark:bg-neutral-950
-        dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-      >
-      <DecorativeImages/>
-      </div>
+    <html lang="es" suppressHydrationWarning>
+      <body className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}>
+        <ThemeProvider attribute="class" enableSystem={true}>
+        <div className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-50 dark:bg-neutral-950
+          dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+          <DecorativeImages/>
+        </div>
         <Navbar />
         <div className="flex-grow">
           {children}
           <SpeedInsights />
         </div>
         <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
