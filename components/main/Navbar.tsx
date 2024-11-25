@@ -138,7 +138,6 @@ const Navbar = () => {
                     key={social.name}
                     width={social.size.width}
                     height={social.size.height}
-                    className="hover:opacity-80 transition duration-200"
                   />
                 </a>
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
@@ -184,7 +183,6 @@ const Navbar = () => {
                       key={social.name}
                       width={social.size.width}
                       height={social.size.height}
-                      className="hover:opacity-80 transition duration-200"
                     />
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
                       {social.name}
