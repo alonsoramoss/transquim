@@ -8,8 +8,7 @@ const CoolBackground = () =>{
     alt="Cool Background"
     width={310}
     height={310}
-    className="hidden lg:block lg:absolute lg:top-0 lg:right-5"
-  />
+    className="hidden lg:block lg:absolute lg:top-0 lg:right-5 pointer-events-none"/>
   );
 };
 

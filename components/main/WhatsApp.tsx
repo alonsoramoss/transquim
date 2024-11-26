@@ -25,7 +25,7 @@ const WhatsApp = () => {
           rel="noopener noreferrer"
           className="block animate-shake"
         >
-          <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={60} height={60} />
+          <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={60} height={60} className="pointer-events-none"/>
         </a>
       </Link>
       {showMessage && (

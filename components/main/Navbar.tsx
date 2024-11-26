@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="w-full h-full flex items-center justify-between mx-auto">
           <div className="hidden md:flex items-center md:space-x-2">
             <a href="/">
-              <Image src="/img/transquim.webp" alt="logo" width={60} height={60}/>
+              <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className="pointer-events-none"/>
             </a>
           </div>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
             <ThemeToggle/>
             <div className="flex items-center justify-center flex-grow">
               <a href="/">
-                <Image src="/img/transquim.webp" alt="logo" width={60} height={60}/>
+                <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className="pointer-events-none"/>
               </a>
             </div>
           </div>
@@ -138,7 +138,7 @@ const Navbar = () => {
                     key={social.name}
                     width={social.size.width}
                     height={social.size.height}
-                  />
+                    className="pointer-events-none"/>
                 </a>
                 <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
                   {social.name}
@@ -183,7 +183,7 @@ const Navbar = () => {
                       key={social.name}
                       width={social.size.width}
                       height={social.size.height}
-                    />
+                      className="pointer-events-none"/>
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
                       {social.name}
                     </span>

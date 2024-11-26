@@ -33,8 +33,8 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
       const y = e.clientY - box.top;
       const centerX = box.width / 2;
       const centerY = box.height / 2;
-      const rotateX = (y - centerY) / 150;
-      const rotateY = (centerX - x) / 150;
+      const rotateX = (y - centerY) / 250;
+      const rotateY = (centerX - x) / 250;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     }, 100),
@@ -59,7 +59,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
       <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
         <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4912a1_0%,#0000ff_50%,#0b1260_100%)]'/>
         <div className='relative h-full w-full items-center justify-center rounded-xl'>
-          <Image src={src} alt={alt} width={2000} height={1000} className="rounded-xl" />
+          <Image src={src} alt={alt} width={2000} height={1000} className="rounded-xl pointer-events-none"/>
         </div>
       </a>
     </div>
