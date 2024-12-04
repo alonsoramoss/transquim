@@ -1,5 +1,5 @@
-import React, { MouseEvent, useCallback } from 'react';
-import Image from 'next/image';
+import React, { MouseEvent, useCallback } from "react";
+import Image from "next/image";
 
 interface MarketCardProps {
   width?: string; 
@@ -43,7 +43,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
 
   const onMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
   };
 
   return (
@@ -53,12 +53,12 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
       onMouseLeave={onMouseLeave}
       style={{
         transform: `perspective(1000px) scale3d(1, 1, 1)`,
-        transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
+        transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
       }}
     >
       <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
-        <span className='absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4912a1_0%,#0000ff_50%,#0b1260_100%)]'/>
-        <div className='relative h-full w-full items-center justify-center rounded-xl'>
+        <span className="absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4912a1_0%,#0000ff_50%,#0b1260_100%)]"/>
+        <div className="relative h-full w-full items-center justify-center rounded-xl">
           <Image src={src} alt={alt} width={2000} height={1000} className="rounded-xl pointer-events-none"/>
         </div>
       </a>

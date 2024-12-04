@@ -1,8 +1,8 @@
 "use client"
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState, useEffect } from 'react'
+import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const WhatsApp = () => {
   const [showMessage, setShowMessage] = useState(false);

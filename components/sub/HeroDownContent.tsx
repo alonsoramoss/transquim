@@ -1,4 +1,4 @@
-import { IconCertificate, IconShieldCheck, IconUsersGroup, IconLeaf } from '@tabler/icons-react';
+import { IconCertificate, IconShieldCheck, IconUsersGroup, IconLeaf } from "@tabler/icons-react";
 
 const HeroDownContent=()=> {
     return (

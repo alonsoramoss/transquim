@@ -11,7 +11,7 @@ const Footer = () => {
         if (targetElement) {
           const yOffset = -80;
           const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+          window.scrollTo({ top: y, behavior: "smooth" });
         }
       };
 
@@ -24,7 +24,7 @@ const Footer = () => {
                             <p>&copy; {currentYear} <a href="https://transquim.vercel.app"> Transformaciones Químicas del Perú </a> </p>
                         </div>
                         <div>
-                            <a href="#inicio" className="hover:underline" onClick={(e) => handleLinkClick(e, 'inicio')}>
+                            <a href="#inicio" className="hover:underline" onClick={(e) => handleLinkClick(e, "inicio")}>
                                 Ir a Inicio
                             </a>
                         </div>

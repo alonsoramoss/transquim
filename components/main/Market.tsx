@@ -1,13 +1,13 @@
 "use client"
 
-import React from 'react';
-import MarketCard from '../sub/MarketCard';
-import MarketButton from '../sub/MarketButton';
+import React from "react";
+import MarketCard from "../sub/MarketCard";
+import MarketButton from "../sub/MarketButton";
 import { Sora } from "next/font/google";
 
 const sora = Sora({ subsets: ["latin"] });
 const Suscribete = () => {
-  const linkMarket = 'https://transquim.com';
+  const linkMarket = "https://transquim.com";
 
   return (
     <div className="flex flex-col items-center text-center py-10 md:py-20" id="market">
@@ -19,7 +19,7 @@ const Suscribete = () => {
         <MarketCard src="/img/market.webp" alt="TRANSQUIM Market" LinkMarket={linkMarket}/>
       </div>
       <div className="mt-6 text-sm md:text-lg">
-        <MarketButton onClick={() => window.open(linkMarket, '_blank')}>
+        <MarketButton onClick={() => window.open(linkMarket, "_blank")}>
         ¡IR A TIENDA!
         </MarketButton>
       </div>

@@ -1,5 +1,5 @@
 
-import { FaChevronDown } from 'react-icons/fa'
+import { FaChevronDown } from "react-icons/fa"
 
 export default function DownArrow() {
   return (

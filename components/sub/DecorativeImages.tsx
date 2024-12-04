@@ -1,14 +1,14 @@
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function DecorativeImages() {
   const positions: string[] = [
-    'top-[15%] left-[10%]',
-    'top-[45%] left-[3%]',
-    'bottom-[15%] left-[15%]',
-    'top-[30%] right-[10%]',
-    'bottom-[35%] right-[5%]',
+    "top-[15%] left-[10%]",
+    "top-[45%] left-[3%]",
+    "bottom-[15%] left-[15%]",
+    "top-[30%] right-[10%]",
+    "bottom-[35%] right-[5%]",
   ];
 
   const [imageClasses, setImageClasses] = useState<string[]>([]);
