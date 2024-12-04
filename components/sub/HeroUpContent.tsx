@@ -1,21 +1,21 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
-import DownArrow from './DownArrow'
+import { useState, useEffect } from "react"
+import DownArrow from "./DownArrow"
 
 const images = [
-  'https://tqp.pe/wp-content/uploads/2020/04/sliderheader3.png',
-  'https://tqp.pe/wp-content/uploads/2020/04/sliderheader2.png',
-  'https://tqp.pe/wp-content/themes/flash/img/depuambi.png',
-  'https://tqp.pe/wp-content/uploads/2020/04/sliderheader1.png',
+  "/img/sliderheader/sliderheader1.webp",
+  "/img/sliderheader/sliderheader2.webp",
+  "/img/sliderheader/sliderheader3.webp",
+  "/img/sliderheader/sliderheader4.webp",
 ]
 
 const sectors = [
-  { name: 'salud', bgColor: 'bg-blue-500/20', textColor: 'text-sky-400' },
-  { name: 'alimentación', bgColor: 'bg-amber-500/20', textColor: 'text-amber-400' },
-  { name: 'cuidado personal', bgColor: 'bg-red-500/20', textColor: 'text-red-400' },
-  { name: 'limpieza', bgColor: 'bg-violet-500/20', textColor: 'text-purple-400' },
-  { name: 'agricultura', bgColor: 'bg-teal-500/20', textColor: 'text-emerald-400' },
+  { name: "salud", bgColor: "bg-blue-500/20", textColor: "text-sky-400" },
+  { name: "alimentación", bgColor: "bg-amber-500/20", textColor: "text-amber-400" },
+  { name: "cuidado personal", bgColor: "bg-red-500/20", textColor: "text-red-400" },
+  { name: "limpieza", bgColor: "bg-violet-500/20", textColor: "text-purple-400" },
+  { name: "agricultura", bgColor: "bg-teal-500/20", textColor: "text-emerald-400" },
 ]
 
 export default function HeroUpContent() {
@@ -35,9 +35,9 @@ export default function HeroUpContent() {
         <div
           key={image}
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            index === currentImageIndex ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${image})`, objectFit: 'contain' }}
+          style={{ backgroundImage: `url(${image})`, objectFit: "contain" }}
         />
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
