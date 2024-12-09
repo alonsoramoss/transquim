@@ -32,15 +32,10 @@ export default function HeroUpContent() {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {images.map((image, index) => (
-        <div
-          key={image}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
-            index === currentImageIndex ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ backgroundImage: `url(${image})`, objectFit: "contain" }}
-        />
+        <div key={image} className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
+          style={{ backgroundImage: `url(${image})`, objectFit: "contain" }}/>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"/>
       <div className="relative flex flex-col items-center px-5 w-full h-full z-[20]" id="inicio">
         <div className="h-full w-full flex flex-col items-center justify-center max-w-[1500px] text-white">
           <div className="animate-fade-in-down">
@@ -49,19 +44,17 @@ export default function HeroUpContent() {
                 TRANSQUIM
               </span>
             </h1>
-            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-orange-600 to-orange-300 rounded" />
+            <div className="h-1 w-32 mx-auto bg-gradient-to-r from-orange-600 to-orange-300 rounded"/>
           </div>
           
           <div className="animate-fade-in-up">
             <p className="md:text-lg lg:text-xl text-center mt-4">
               Soluciones confiables e innovadoras en los sectores de:
-              <br />
+              <br/>
               <span className="inline-flex flex-wrap justify-center gap-2 py-4">
                 {sectors.map((sector) => (
-                  <span
-                    key={sector.name}
-                    className={`inline-block px-3 py-1 ${sector.bgColor} rounded-full font-semibold ${sector.textColor} transition-all duration-300 hover:scale-105`}
-                  >
+                  <span key={sector.name}
+                    className={`inline-block px-3 py-1 ${sector.bgColor} rounded-full font-semibold ${sector.textColor} transition-all duration-300 hover:scale-105`}>
                     {sector.name}
                   </span>
                 ))}
@@ -69,12 +62,11 @@ export default function HeroUpContent() {
             </p>
             
             <p className="hidden md:block max-w-4xl md:text-lg lg:text-xl text-center mx-auto [&>strong]:font-bold [&>strong]:text-orange-400">
-              Nuestro compromiso es proporcionar <strong> productos de alta calidad </strong> que cumplen con los más estrictos <strong> estándares de manufactura</strong> y <strong> buenas prácticas
-              </strong>.
+              Nuestro compromiso es proporcionar <strong> productos de alta calidad </strong> que cumplen con los más estrictos <strong> estándares de manufactura </strong> y <strong> buenas prácticas </strong>.
             </p>
           </div>
         </div>
-        <DownArrow />
+        <DownArrow/>
       </div>
     </div>
   )

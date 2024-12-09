@@ -1,10 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { IDevToolsElement } from "@/components/sub/ToolMarcas"
-import { DevTools } from "@/components/sub/ToolMarcas"
 import { Sora } from "next/font/google"
 import Slider from "react-slick"
+import { DevTools, IDevToolsElement } from "../sub/ToolMarcas"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
@@ -58,8 +57,7 @@ export default function Component() {
                     src={tool.src}
                     width={tool.width}
                     height={tool.height}
-                    alt={tool.alt}
-                  />
+                    alt={tool.alt}/>
                 </a>
               </div>
             ))}

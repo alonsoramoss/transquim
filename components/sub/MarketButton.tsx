@@ -28,8 +28,7 @@ const MarketButton: React.FC<MarketButtonProps> = ({ children, onClick }) => {
       style={{
         transform: `scale(${scale})`,
         transition: "transform 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99)",
-      }}
-    >
+      }}>
       <div className="absolute -inset-0 -z-10 rounded-lg bg-gradient-to-b from-[#00e5ff] to-[#0077ff] opacity-85 blur"/>
       {children}
     </button>

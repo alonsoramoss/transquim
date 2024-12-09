@@ -2,12 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { Socials } from "@/constants";
 import ThemeToggle from "./ThemeToggle";
-import { slideInFromTop } from "@/utils/motion";
 import { Sora } from "next/font/google";
+import { Socials } from "@/constants/index";
+import { AnimatePresence, motion } from "framer-motion";
+import { slideInFromTop } from "@/utils/motion";
 
 const sora = Sora({ subsets: ["latin"] });
 
@@ -158,8 +158,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden"
-            >
+              className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden">
               <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
                 <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "inicio"); closeMenu(); }}>
                   INICIO

@@ -54,8 +54,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
       style={{
         transform: `perspective(1000px) scale3d(1, 1, 1)`,
         transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-      }}
-    >
+      }}>
       <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full">
         <span className="absolute inset-[-50%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#4912a1_0%,#0000ff_50%,#0b1260_100%)]"/>
         <div className="relative h-full w-full items-center justify-center rounded-xl">

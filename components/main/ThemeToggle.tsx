@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { IoSunny, IoMoon } from "react-icons/io5";
+import { IoMoon, IoSunny } from "react-icons/io5";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
