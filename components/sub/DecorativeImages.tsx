@@ -28,32 +28,27 @@ function DecorativeImages() {
           <div>
             <img
               alt="alessi"
-              src="http://tqp.pe/wp-content/uploads/2020/03/newalessi.png"
-              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[0]}`}
-            />
+              src="/img/DecorativeImages/newalessi.webp"
+              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[0]}`}/>
             <img
               alt="slender"
-              src="http://tqp.pe/wp-content/uploads/2020/03/newslender.png"
-              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[1]}`}
-            />
+              src="/img/DecorativeImages/newslender.webp"
+              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[1]}`}/>
             <img
               alt="bioflux"
-              src="http://tqp.pe/wp-content/uploads/2020/03/newbioflux.png"
-              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[2]}`}
-            />
+              src="/img/DecorativeImages/newbioflux.webp"
+              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[2]}`}/>
           </div>
 
           <div>
             <img
               alt="yara"
-              src="http://tqp.pe/wp-content/uploads/2020/03/newyara.png"
-              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[3]}`}
-            />
+              src="/img/DecorativeImages/newyara.webp"
+              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[3]}`}/>
             <img
               alt="ecovibe"
-              src="http://tqp.pe/wp-content/uploads/2020/03/newecovibe.png"
-              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[4]}`}
-            />
+              src="/img/DecorativeImages/newecovibe.webp"
+              className={`fixed opacity-10 dark:opacity-5 z-[-1] w-[100px] md:w-[150px] lg:w-[200px] ${imageClasses[4]}`}/>
           </div>
         </>
       )}
