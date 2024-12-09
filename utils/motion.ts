@@ -19,7 +19,7 @@ export function slideInFromRight(delay: number) {
 }
 
 export const slideInFromTop = {
-  hidden: { y: -25, opacity: 0 },
+  hidden: { y: -20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
