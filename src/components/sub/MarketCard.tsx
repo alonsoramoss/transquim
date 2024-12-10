@@ -1,5 +1,5 @@
-import React, { MouseEvent, useCallback } from "react";
-import Image from "next/image";
+import React, { MouseEvent, useCallback } from "react"
+import Image from "next/image"
 
 interface MarketCardProps {
   width?: string; 

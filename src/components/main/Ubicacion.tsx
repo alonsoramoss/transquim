@@ -1,4 +1,4 @@
-import { Sora } from "next/font/google";
+import { Sora } from "next/font/google"
 
 const sora = Sora({ subsets: ["latin"] });
 

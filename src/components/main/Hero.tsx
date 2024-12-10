@@ -1,6 +1,6 @@
 
-import HeroUpContent from "../sub/HeroUpContent";
-import HeroDownContent from "../sub/HeroDownContent";
+import HeroUpContent from "../sub/HeroUpContent"
+import HeroDownContent from "../sub/HeroDownContent"
 
 const Hero = () => {
   return (

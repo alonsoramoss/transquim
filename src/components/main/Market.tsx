@@ -1,8 +1,8 @@
 "use client"
 
-import MarketCard from "../sub/MarketCard";
-import MarketButton from "../sub/MarketButton";
-import { Sora } from "next/font/google";
+import MarketCard from "../sub/MarketCard"
+import MarketButton from "../sub/MarketButton"
+import { Sora } from "next/font/google"
 
 const sora = Sora({ subsets: ["latin"] });
 const Suscribete = () => {

@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
-import { Sora } from "next/font/google";
-import { Socials } from "@/constants/index";
-import { AnimatePresence, motion } from "framer-motion";
-import { slideInFromTop } from "@/utils/motion";
+import { useState, useEffect, useRef } from "react"
+import { useTheme } from "next-themes"
+import Image from "next/image"
+import ThemeToggle from "./ThemeToggle"
+import { Sora } from "next/font/google"
+import { Socials } from "@/constants/index"
+import { AnimatePresence, motion } from "framer-motion"
+import { slideInFromTop } from "@/utils/motion"
 
 const sora = Sora({ subsets: ["latin"] });
 

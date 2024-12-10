@@ -1,6 +1,6 @@
-import { Sora } from "next/font/google";
+import { Sora } from "next/font/google"
 import CoolBackground from "../sub/CoolBackground"
-import Image from "next/image";
+import Image from "next/image"
 
 const sora = Sora({ subsets: ["latin"] });
 const Contacto = () => {
