@@ -17,11 +17,9 @@ export default function NotFound() {
           <p className="text-base md:text-lg mt-5">
             ¡Hola! No hemos encontrado lo que buscabas. Verifica que la URL sea correcta o usa el botón de abajo para volver a nuestro sitio web.
           </p>
-          <div className="mt-8">
-            <a href="/" className="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-800 transition duration-300">
-              Volver al inicio
-            </a>
-          </div>
+          <a href="/" className="mt-5 inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-800 transition duration-300">
+            Volver al inicio
+          </a>
         </div>
       </div>
     </>
