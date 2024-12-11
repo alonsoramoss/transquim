@@ -19,7 +19,7 @@ export default function NotFound() {
           </p>
           <div className="mt-8">
             <a href="/" className="px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-800 transition duration-300">
-              Volver a inicio
+              Volver al inicio
             </a>
           </div>
         </div>
