@@ -2,8 +2,7 @@ import Navbar404 from "@/components/main/Navbar404";
 
 export const metadata = {
   title: "Página no encontrada - Transformaciones Químicas del Perú",
-  description:
-    "Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
+  description: "Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
 };
 
 export default function NotFound() {
