@@ -51,7 +51,7 @@ export default function Component() {
           <Slider {...settings}>
             {DevTools.map((tool: IDevToolsElement) => (
               <div key={tool.id} className="px-2">
-                <a href={tool.href} target="_blank" title={tool.alt} className="block">
+                <a href={tool.href} target="_blank" rel="noopener" title={tool.alt} className="block">
                   <img
                     className={`object-contain rounded-md mx-auto transition hover:contrast-125 ${tool?.className}`}
                     src={tool.src}

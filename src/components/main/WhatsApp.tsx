@@ -18,7 +18,7 @@ const WhatsApp = () => {
 
   return (
     <div className="fixed right-3 bottom-3 w-10 z-50">
-      <a href={`https://wa.me/51991282997?text=${whatsappMensaje}`} target="_blank" rel="noopener noreferrer" className="block animate-shake">
+      <a href={`https://wa.me/51991282997?text=${whatsappMensaje}`} target="_blank" rel="noopener" className="block animate-shake">
         <Image src="/svg/whatsapp.svg" alt="WhatsApp" width={60} height={60} className="pointer-events-none"/>
       </a>
       {showMessage && (

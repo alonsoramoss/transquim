@@ -27,13 +27,13 @@ const Contacto = () => {
               <div className="text-start md:text-center">
                 <h2 className="mb-1">Nuestras Redes</h2>
                 <div className="flex flex-row items-center justify-start md:justify-center gap-4">
-                  <a href="https://www.facebook.com/transquim" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/transquim" target="_blank" rel="noopener">
                     <Image src="/svg/facebook.svg" alt="facebook" width={30} height={30} className="pointer-events-none"/>
                   </a>
-                  <a href="https://www.instagram.com/yara_chocolates" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/yara_chocolates" target="_blank" rel="noopener">
                     <Image src="/svg/instagram.svg" alt="instagram" width={30} height={30} className="pointer-events-none"/>
                   </a>
-                  <a href="https://www.linkedin.com/company/transformaciones-qu%C3%ADmicas-del-per%C3%BA-sac" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/company/transformaciones-qu%C3%ADmicas-del-per%C3%BA-sac" target="_blank" rel="noopener">
                     <Image src="/svg/linkedin.svg" alt="linkedin" width={30} height={30} className="pointer-events-none"/>
                   </a>
                 </div>
