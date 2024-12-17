@@ -103,12 +103,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-5">
             {Socials.map((social) => (
               <div key={social.name} className="relative group">
-                <a href={social.url} target="_blank" key={social.name} className="relative group">
+                <a href={social.url} target="_blank" rel="noopener">
                   {theme && (
                     <Image 
-                      src={theme === "dark" ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
+                      src={theme === "dark" ? social.src.light : social.src.dark}
                       alt={social.name}
-                      key={social.name}
                       width={social.size.width}
                       height={social.size.height}
                       className="pointer-events-none"/>
@@ -149,11 +148,10 @@ const Navbar = () => {
               </nav>
               <div className="flex py-4 justify-center">
                 {Socials.map((social) => (
-                  <a href={social.url} target="_blank" key={social.name} className="relative group mx-3">
+                  <a href={social.url} target="_blank" key={social.name} rel="noopener" className="relative group mx-3">
                     <Image
-                      src={theme === "dark" ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
+                      src={theme === "dark" ? social.src.light : social.src.dark}
                       alt={social.name}
-                      key={social.name}
                       width={social.size.width}
                       height={social.size.height}
                       className="pointer-events-none"/>
