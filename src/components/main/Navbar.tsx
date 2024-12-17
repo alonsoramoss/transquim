@@ -133,7 +133,7 @@ const Navbar = () => {
               <div key={social.name} className="relative group">
                 <a href={social.url} target="_blank" key={social.name} className="relative group">
                   <Image 
-                    src={hasScrolled ? theme === "dark" ? `/svg/${social.src.light}` : `/svg/${social.src.dark}` : `/svg/${social.src.light}`}
+                    src={hasScrolled ? theme === "dark" ? `${social.src.light}` : `${social.src.dark}` : `${social.src.light}`}
                     alt={social.name}
                     key={social.name}
                     width={social.size.width}
@@ -177,7 +177,7 @@ const Navbar = () => {
                 {Socials.map((social) => (
                   <a href={social.url} target="_blank" key={social.name} className="relative group mx-3">
                     <Image
-                      src={theme === "dark" ? `/svg/light-${social.src}` : `/svg/dark-${social.src}`}
+                      src={theme === "dark" ? `${social.src.light}` : `${social.src.dark}`}
                       alt={social.name}
                       key={social.name}
                       width={social.size.width}
