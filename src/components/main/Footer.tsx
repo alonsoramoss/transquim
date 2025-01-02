@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="text-sm md:text-base">
                     <div className="flex items-center justify-between">
                         <div className="max-w-52 md:max-w-full">
-                            <p>&copy; {currentYear} <a href="https://transquim.vercel.app"> Transformaciones Químicas del Perú </a></p>
+                            <p> &copy; {currentYear} Transformaciones Químicas del Perú </p>
                         </div>
                         <div>
                             <a href="#inicio" className="hover:underline" onClick={(e) => handleLinkClick(e, "inicio")}>
