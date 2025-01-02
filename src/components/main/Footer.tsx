@@ -22,7 +22,7 @@ const Footer = () => {
                             <p> &copy; {currentYear} Transformaciones Químicas del Perú </p>
                         </div>
                         <div>
-                            <a href="#inicio" className="hover:underline" onClick={(e) => handleLinkClick(e, "inicio")}>
+                            <a href="#inicio" className="underline" onClick={(e) => handleLinkClick(e, "inicio")}>
                                 Ir a Inicio
                             </a>
                         </div>
