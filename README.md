@@ -9,7 +9,7 @@ Página web que destaca la descripción de la empresa, marcas, tienda online, ub
     git clone https://github.com/alonsoramoss/transquim.git
 
 #### 2. Instala dependencias
-    npm install
+    pnpm install
 
 #### 3. Inicia el servidor de desarrollo
-    npm run dev
+    pnpm run dev
