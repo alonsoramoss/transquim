@@ -1,5 +1,5 @@
 # TRANSQUIM
-Página web que destaca la descripción de la empresa, marcas, tienda online, ubicación y secciones de contacto.
+Página web que destaca la información de la empresa, sus marcas, tienda en línea, ubicación y secciones de contacto.
 
 ![transquim](https://github.com/user-attachments/assets/13448d68-edb0-4482-a77c-1fabc3cc1038)
 
