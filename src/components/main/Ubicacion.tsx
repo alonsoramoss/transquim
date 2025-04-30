@@ -4,7 +4,7 @@ const sora = Sora({ subsets: ["latin"] });
 
 const Ubicacion = () => {
   return (
-    <div className="flex flex-col items-center text-center pt-10 md:pt-20" id="ubicacion">
+    <div className="flex flex-col items-center text-center pt-20" id="ubicacion">
       <h1 className={`${sora.className} text-4xl md:text-5xl pt-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700`}>
         UBÍCANOS
       </h1>
@@ -20,7 +20,7 @@ const Ubicacion = () => {
           </iframe>
         </div>
       </div>
-      <div className="flex space-x-4 mt-10 md:mt-20">
+      <div className="flex space-x-4 mt-20">
         <span className="h-4 w-4 bg-gray-400 rounded-full"></span>
         <span className="h-4 w-4 bg-gray-400 rounded-full"></span>
         <span className="h-4 w-4 bg-gray-400 rounded-full"></span>

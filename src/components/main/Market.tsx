@@ -9,7 +9,7 @@ const Suscribete = () => {
   const linkMarket = "https://transquim.com";
 
   return (
-    <div className="flex flex-col items-center text-center py-10 md:py-20" id="market">
+    <div className="flex flex-col items-center text-center py-20" id="market">
       <h1 className={`${sora.className} text-3xl md:text-5xl px-5 md:px-10 font-extrabold text-green-700 dark:text-lime-400`}>
         ¡VISITA NUESTRA TIENDA EN LÍNEA!
       </h1>
