@@ -10,13 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, #4912a1, #0000ff, #000080)',
       },
       animation: {
         'fade-in-down': 'fade-in-down 1s ease-out',
         'fade-in-up': 'fade-in-up 1s ease-out 0.5s backwards',
         'fadeIn': 'fadeIn 0.5s ease-out',
         'shake': 'shake 2s ease-in-out infinite',
+        'spin': 'spin 10s linear infinite',
       },
       keyframes: {
         'fade-in-down': {
