@@ -16,23 +16,29 @@ html {
   background-color: #0059a6
 }
 
-::-webkit-scrollbar-track {
-  background: #1f2530;
-}
+@layer base{
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
+  ::-webkit-scrollbar-track {
+    background: #161616;
+  }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #DDDDDD;
-  border: 2px solid transparent;
-  background-clip: content-box;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #0059a6; 
+    border-radius: 5px;
+    border: 2px solid #161616;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #4586BE;
+  }
 
-::-webkit-scrollbar-thumb:active {
-  background-color: #666666;
+  * {
+    scrollbar-color: #0059a6 #161616;
+    scrollbar-width: thin;
+  }
 }
 
 .card-item {
