@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
 import Image from "next/image"
-import ThemeToggle from "./ThemeToggle"
+import ThemeToggle from "../sub/ThemeToggle"
 import { Sora } from "next/font/google"
 import { Socials } from "@/constants/index"
 import { AnimatePresence, motion } from "framer-motion"
