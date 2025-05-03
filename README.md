@@ -11,7 +11,6 @@ Página web que destaca la información de la empresa, sus marcas, tienda en lí
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8)
 
 ## Instalación
-
 #### 1. Clona el repositorio
     git clone https://github.com/alonsoramoss/transquim.git
 
