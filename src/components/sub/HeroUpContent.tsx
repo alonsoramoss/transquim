@@ -10,7 +10,7 @@ const images = [
   "/img/sliderheader/sliderheader4.webp",
 ]
 
-const sectors = [
+const sectores = [
   { name: "salud", bgColor: "bg-blue-500/20", textColor: "text-sky-400" },
   { name: "alimentación", bgColor: "bg-amber-500/20", textColor: "text-amber-400" },
   { name: "cuidado personal", bgColor: "bg-red-500/20", textColor: "text-red-400" },
@@ -49,10 +49,10 @@ export default function HeroUpContent() {
           
           <div className="animate-fade-in-up">
             <p className="md:text-lg lg:text-xl text-center mt-4">
-              Soluciones confiables e innovadoras en los sectores de:
+              Productos y soluciones en los sectores
               <br/>
               <span className="inline-flex flex-wrap justify-center gap-2 py-4">
-                {sectors.map((sector) => (
+                {sectores.map((sector) => (
                   <span key={sector.name}
                     className={`inline-block px-3 py-1 ${sector.bgColor} rounded-full font-semibold ${sector.textColor} transition-all duration-300 hover:scale-105`}>
                     {sector.name}
@@ -62,7 +62,7 @@ export default function HeroUpContent() {
             </p>
             
             <p className="hidden md:block max-w-4xl md:text-lg lg:text-xl text-center mx-auto [&>strong]:font-bold [&>strong]:text-orange-400">
-              Nuestro compromiso es proporcionar <strong> productos de alta calidad </strong> que cumplen con los más estrictos <strong> estándares de manufactura </strong> y <strong> buenas prácticas </strong>.
+              Nuestro compromiso es proporcionar <strong>productos de alta calidad</strong> que cumplen con los más estrictos <strong>estándares de manufactura</strong> y <strong>buenas prácticas</strong>.
             </p>
           </div>
         </div>
