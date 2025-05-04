@@ -14,7 +14,7 @@ export default function RootLayout({ children }: {
     <html lang="es">
       <head>
         <title>Transformaciones Químicas del Perú</title>
-        <meta name="description" content="Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
+        <meta name="description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
         <meta name="author" content="Alonso Ramos" />
         <meta name="creator" content="Alonso Ramos" />
 
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: {
         <meta property="og:url" content="https://transquim.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Transformaciones Químicas del Perú" />
-        <meta property="og:description" content="Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
+        <meta property="og:description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
         <meta property="og:image" content="https://transquim.vercel.app/og.jpg" />
         <meta property="og:site_name" content="Transformaciones Químicas del Perú" />
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: {
         <meta property="twitter:domain" content="transquim.vercel.app" />
         <meta property="twitter:url" content="https://transquim.vercel.app" />
         <meta name="twitter:title" content="Transformaciones Químicas del Perú" />
-        <meta name="twitter:description" content="Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
+        <meta name="twitter:description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
         <meta name="twitter:image" content="https://transquim.vercel.app/og.jpg" />
       </head>
       <body suppressHydrationWarning className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}>
