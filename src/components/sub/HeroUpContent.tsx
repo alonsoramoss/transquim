@@ -49,7 +49,7 @@ export default function HeroUpContent() {
           
           <div className="animate-fade-in-up">
             <p className="md:text-lg lg:text-xl text-center mt-4">
-              Productos y soluciones en los sectores
+              Ofrecemos productos y soluciones en los sectores de:
               <br/>
               <span className="inline-flex flex-wrap justify-center gap-2 py-4">
                 {sectores.map((sector) => (
