@@ -40,7 +40,6 @@ export default function RootLayout({ children }: {
         <meta property="twitter:url" content="https://transquim.vercel.app" />
         <meta name="twitter:title" content="Transformaciones Químicas del Perú" />
         <meta name="twitter:description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
-        <meta name="twitter:image" content="https://transquim.vercel.app/og.jpg" />
       </head>
       <body suppressHydrationWarning className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}>
         <ClientThemeWrapper>
