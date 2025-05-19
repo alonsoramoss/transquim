@@ -2,6 +2,7 @@
     "name": "Transformaciones Químicas del Perú",
     "short_name": "Transformaciones Químicas del Perú",
     "description": "Soluciones innovadoras en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
+    "start_url": "/",
     "display": "minimal-ui",
     "background_color": "#ffffff",
     "theme_color": "#ff8000",
