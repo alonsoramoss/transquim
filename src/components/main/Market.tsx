@@ -5,6 +5,7 @@ import MarketButton from "../sub/MarketButton"
 import { Sora } from "next/font/google"
 
 const sora = Sora({ subsets: ["latin"] });
+
 const Suscribete = () => {
   const linkMarket = "https://transquim.com";
 
@@ -18,7 +19,7 @@ const Suscribete = () => {
         <MarketCard src="/img/market.webp" alt="TRANSQUIM Market" LinkMarket={linkMarket}/>
       </div>
       <div className="mt-6 text-sm md:text-lg">
-        <MarketButton onClick={() => window.open(linkMarket, "_blank")}>
+        <MarketButton href={linkMarket}>
         ¡IR A TIENDA!
         </MarketButton>
       </div>
