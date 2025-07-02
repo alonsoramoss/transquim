@@ -17,7 +17,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Alessi - Alcoholes, jabones y productos de limpieza",
         src: "/img/marcas/alessi.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
     {
         id: uuid(),
@@ -25,7 +25,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Slender - Productos saludables para un estilo de vida sano",
         src: "/img/marcas/slender.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
     {
         id: uuid(),
@@ -33,7 +33,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Yara - Chocolate peruano con cacao orgánico fino de aroma",
         src: "/img/marcas/yara.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
     {
         id: uuid(),
@@ -41,7 +41,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Slender Gel Reforzado - Gel tonificante que refresca y humecta la piel",
         src: "/img/marcas/slender2.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
     {
         id: uuid(),
@@ -49,7 +49,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Ecovibe - Gel de ecografía y ultrasonido, no alergénico y fácil de aplicar",
         src: "/img/marcas/ecovibe.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
     {
         id: uuid(),
@@ -57,7 +57,7 @@ export const DevTools: IDevToolsElement[] = [
         alt: "Bioflux - Agroquímicos y soluciones de tratamiento de aguas residuales",
         src: "/img/marcas/bioflux.webp",
         width: "550",
-        height: "230",
+        height: "228",
     },
 ];
 

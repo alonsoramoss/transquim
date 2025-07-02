@@ -58,7 +58,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
       <a href={LinkMarket} target="_blank" rel="noopener" className="block h-full w-full">
         <span className="absolute inset-[-50%] bg-gradient-conic animate-spin" />
         <div className="relative h-full w-full items-center justify-center rounded-xl">
-          <Image src={src} alt={alt} width={2000} height={955} className="rounded-xl pointer-events-none"/>
+          <Image src={src} alt={alt} width={2000} height={913} className="rounded-xl pointer-events-none"/>
         </div>
       </a>
     </div>
