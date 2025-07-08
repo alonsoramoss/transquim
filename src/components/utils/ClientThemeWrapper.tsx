@@ -13,7 +13,7 @@ export default function ClientThemeWrapper({ children }: { children: React.React
     if (!mounted) return null;
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
             {children}
         </ThemeProvider>
     );
