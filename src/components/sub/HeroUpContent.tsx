@@ -37,7 +37,7 @@ export default function HeroUpContent() {
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"/>
       <div className="relative flex flex-col items-center px-5 w-full h-full z-[20]" id="inicio">
-        <div className="h-full w-full flex flex-col items-center justify-center max-w-[1500px] text-white">
+        <div className="h-full w-full flex flex-col items-center justify-center text-white">
           <div className="animate-fade-in-down">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center mb-4">
               <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 text-transparent bg-clip-text">

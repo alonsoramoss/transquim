@@ -15,7 +15,7 @@ const Suscribete = () => {
         ¡VISITA NUESTRA TIENDA EN LÍNEA!
       </h1>
       <div className="h-1 w-16 my-4 md:my-8 bg-teal-500 animate-pulse rounded"/>
-      <div className="max-w-[1500px] px-5">
+      <div className="max-w-7xl px-5">
         <MarketCard src="/img/market.webp" alt="TRANSQUIM Market" LinkMarket={linkMarket}/>
       </div>
       <div className="mt-6 text-sm md:text-lg">

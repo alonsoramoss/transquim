@@ -86,8 +86,8 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 px-5 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
-        <div className="w-full h-full flex items-center justify-between mx-auto">
+        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+        <div className="max-w-7xl h-full flex items-center justify-between mx-auto px-5">
           <div className="hidden md:flex items-center md:space-x-2">
             <a href="/">
               <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className="pointer-events-none"/>
