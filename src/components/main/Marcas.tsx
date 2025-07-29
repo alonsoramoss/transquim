@@ -40,8 +40,8 @@ export default function Component() {
 
   return (
     <div className="flex flex-col items-center mx-auto py-20 px-0 md:px-5 max-w-7xl">
-      <article className="w-full bg-gradient-to-t from-[#278074] to-[#0a0f67] dark:from-[#38b1a1] dark:to-[#070d76] py-10 md:py-16 md:rounded-2xl">
-        <h1 className={`${sora.className} text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600`}>
+      <article className="w-full bg-gradient-to-t from-[#00ffdd] to-[#0009b8] dark:from-[#38b1a1] dark:to-[#070d76] py-10 md:py-16 md:rounded-2xl">
+        <h1 className={`${sora.className} text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500`}>
           MARCAS
         </h1>
         <p className="text-lg md:text-xl font-bold text-center text-white py-8">

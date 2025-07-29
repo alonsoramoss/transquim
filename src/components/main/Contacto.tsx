@@ -6,9 +6,9 @@ const sora = Sora({ subsets: ["latin"] });
 const Contacto = () => {
   return (
     <div className="flex flex-col md:items-center mx-auto pt-20 md:pb-40 px-0 md:px-5 max-w-7xl" id="contacto">
-        <article className="flex flex-col bg-gradient-to-r from-[#eb8657] to-[#d0ac7a] dark:from-[#a15633] dark:to-[#b87e2d] py-10 md:py-16 px-5 md:px-10 items-center md:relative md:rounded-2xl">
+        <article className="flex flex-col bg-gradient-to-r from-[#fb7d42] to-[#fdc87d] dark:from-[#ab491b] dark:to-[#e29b36] py-10 md:py-16 px-5 md:px-10 items-center md:relative md:rounded-2xl">
           <CoolBackground/>
-          <h1 className={`${sora.className} text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700`}>
+          <h1 className={`${sora.className} text-4xl md:text-5xl pt-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700`}>
             CONTÁCTANOS
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
