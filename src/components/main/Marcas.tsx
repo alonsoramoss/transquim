@@ -39,7 +39,7 @@ export default function Component() {
   }
 
   return (
-    <div className="flex flex-col items-center mx-auto py-20 px-0 md:px-5 max-w-7xl">
+    <div className="flex flex-col items-center mx-auto py-20 px-0 md:px-5 max-w-[1440px]">
       <article className="w-full bg-gradient-to-t from-[#00ffdd] to-[#0009b8] dark:from-[#38b1a1] dark:to-[#070d76] py-10 md:py-16 md:rounded-2xl">
         <h1 className={`${sora.className} text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500`}>
           MARCAS
@@ -47,7 +47,7 @@ export default function Component() {
         <p className="text-lg md:text-xl font-bold text-center text-white py-8">
           ¡Explora nuestras marcas y productos!
         </p>
-        <div className="max-w-7xl w-full px-10">
+        <div className="w-full px-10">
           <Slider {...settings}>
             {DevTools.map((tool: IDevToolsElement) => (
               <div key={tool.id} className="px-2">
