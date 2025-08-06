@@ -1,5 +1,5 @@
 # TRANSQUIM
-Sitio web que presenta información relevante sobre la empresa, sus marcas, tienda en línea, ubicación y canales de contacto.
+Landing page para TRANSQUIM, diseñada para proporcionar información de la empresa, sus marcas, tienda en línea, ubicación y canales de contacto.
 
 ![transquimdesk_github](https://github.com/user-attachments/assets/e52c0c91-ea62-407c-8f8a-12c2521f6760)
 ![transquimmov_github](https://github.com/user-attachments/assets/14fea238-daac-4904-ae75-30df5705398b)
