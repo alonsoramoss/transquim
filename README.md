@@ -1,8 +1,7 @@
 # TRANSQUIM
 Landing page para TRANSQUIM, diseñada para proporcionar información de la empresa, sus marcas, tienda en línea, ubicación y canales de contacto.
 
-![transquimdesk_github](https://github.com/user-attachments/assets/e52c0c91-ea62-407c-8f8a-12c2521f6760)
-![transquimmov_github](https://github.com/user-attachments/assets/14fea238-daac-4904-ae75-30df5705398b)
+![transquim](https://github.com/user-attachments/assets/f0309582-d226-4720-b3bc-9e93352746ee)
 
 ## Tecnologías
 - ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
