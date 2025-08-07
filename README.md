@@ -13,8 +13,11 @@ Landing page para TRANSQUIM, diseñada para proporcionar información de la empr
 #### 1. Clona el repositorio
     git clone https://github.com/alonsoramoss/transquim.git
 
-#### 2. Instala dependencias
+#### 2. Entra al directorio del proyecto
+    cd transquim
+
+#### 3. Instala dependencias
     pnpm install
 
-#### 3. Inicia el servidor de desarrollo
+#### 4. Inicia el servidor de desarrollo
     pnpm run dev
