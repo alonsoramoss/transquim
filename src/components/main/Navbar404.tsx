@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import Image from "next/image"
 import ThemeToggle from "../sub/ThemeToggle"
 import { Sora } from "next/font/google"
-import { Socials } from "@/constants/index"
+import { NavLinks } from "@/constants/index"
 import { AnimatePresence, motion } from "framer-motion"
 import { slideInFromTop } from "@/utils/motion"
 
@@ -101,23 +101,23 @@ const Navbar = () => {
           </button>
 
           <div className="hidden md:flex items-center space-x-5">
-            {Socials.map((social) => (
-              <div key={social.name} className="relative group">
-                <a href={social.url} target="_blank" rel="noopener">
-                  {theme && (
-                    <Image 
-                      src={theme === "dark" ? social.src.light : social.src.dark}
-                      alt={social.name}
-                      width={social.size.width}
-                      height={social.size.height}
-                      className="pointer-events-none"/>
-                  )}
-                </a>
-                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
-                  {social.name}
-                </span>
-              </div>
-            ))}
+            {NavLinks.map((social) => {
+              const Icon = social.icon;
+              
+              return (
+                <div key={social.id} className="relative">
+                  <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
+                    <Icon
+                      size={social.size}
+                      className={`${theme === "dark" ? "text-white" : "text-black"}`}
+                    />
+                  </a>
+                  <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                    {social.name}
+                  </span>
+                </div>
+              );
+            })}
             <ThemeToggle/>
           </div>
         </div>
@@ -146,20 +146,24 @@ const Navbar = () => {
                   CONTACTO
                 </a>
               </nav>
-              <div className="flex py-4 justify-center">
-                {Socials.map((social) => (
-                  <a href={social.url} target="_blank" key={social.name} rel="noopener" className="relative group mx-3">
-                    <Image
-                      src={theme === "dark" ? social.src.light : social.src.dark}
-                      alt={social.name}
-                      width={social.size.width}
-                      height={social.size.height}
-                      className="pointer-events-none"/>
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm bg-black text-white rounded px-2 py-1 transition-opacity duration-300">
-                      {social.name}
-                    </span>
-                  </a>
-                ))}
+              <div className="flex pt-2 pb-4 justify-center space-x-5">
+                {NavLinks.map((social) => {
+                  const Icon = social.icon;
+
+                  return (
+                    <div key={social.id} className="relative">
+                      <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
+                        <Icon
+                          size={social.size}
+                          className={`${theme === "dark" ? "text-white" : "text-black"}`}
+                        />
+                      </a>
+                      <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                        {social.name}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </motion.div>
           )}
