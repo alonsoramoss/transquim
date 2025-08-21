@@ -1,26 +1,18 @@
-export const Socials = [
+import { Store, ShoppingCart } from "lucide-react";
+
+export const NavLinks = [
   {
+    id: "tienda",
     name: "Tienda",
-    src: {
-      light: "svg/light-tienda.svg",
-      dark: "svg/dark-tienda.svg"
-    },
+    icon: Store,
     url: "https://transquim.com",
-    size: {
-      width: 30,
-      height: 30 
-    }
+    size: 30,
   },
   {
+    id: "productos",
     name: "Productos",
-    src: {
-      light: "svg/light-carrito.svg",
-      dark: "svg/dark-carrito.svg"
-    },
+    icon: ShoppingCart,
     url: "https://transquim.com/collections/all",
-    size: { 
-      width: 30,
-      height: 30 
-    }
+    size: 30,
   },
 ];
