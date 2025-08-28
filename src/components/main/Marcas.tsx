@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Sora } from "next/font/google"
+import { useState, useEffect } from "react"
 import Slider from "react-slick"
-import { DevTools, IDevToolsElement } from "../sub/ToolMarcas"
+import { MARCAS } from "@/constants/marcas"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
@@ -49,18 +49,19 @@ export default function Component() {
         </p>
         <div className="w-full px-10">
           <Slider {...settings}>
-            {DevTools.map((tool: IDevToolsElement) => (
-              <div key={tool.id} className="px-2">
-                <a href={tool.href} target="_blank" rel="noopener" title={tool.alt} className="block">
+            {
+              MARCAS.map((marca) => (
+                <a href={marca.href} target="_blank" rel="noopener noreferrer" key={marca.id} aria-label={marca.alt} title={marca.alt} className="px-2 focus:outline-none">
                   <img
-                    className={`object-contain rounded-md mx-auto transition hover:contrast-125 ${tool?.className}`}
-                    src={tool.src}
-                    width={tool.width}
-                    height={tool.height}
-                    alt={tool.alt}/>
+                    className= "object-contain rounded-md mx-auto transition hover:contrast-125"
+                    src={marca.src}
+                    alt={marca.name} 
+                    width={marca.width}
+                    height={marca.height}
+                  />
                 </a>
-              </div>
-            ))}
+              ))
+            }
           </Slider>
         </div>
       </article>
