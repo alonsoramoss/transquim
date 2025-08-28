@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
 import ThemeToggle from "../sub/ThemeToggle"
 import { Sora } from "next/font/google"
-import { NavLinks } from "@/constants/index"
+import { NAV_LINKS } from "@/constants/navLinks"
 import { AnimatePresence, motion } from "framer-motion"
 import { slideInFromTop } from "@/utils/motion"
 
@@ -96,23 +96,25 @@ const Navbar = () => {
         </button>
 
         <div className="hidden md:flex items-center space-x-5">
-          {NavLinks.map((social) => {
-            const Icon = social.icon;
-            
-            return (
-              <div key={social.id} className="relative">
-                <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
-                  <Icon
-                    size={social.size}
-                    className={`${theme === "dark" ? "text-white" : "text-black"}`}
-                  />
-                </a>
-                <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
-                  {social.name}
-                </span>
-              </div>
-            );
-          })}
+          {
+            NAV_LINKS.map((link) => {
+              const Icon = link.icon;
+              
+              return (
+                <div key={link.id} className="relative">
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name} className="peer">
+                    <Icon
+                      size={link.size}
+                      className={`${theme === "dark" ? "text-white" : "text-black"}`}
+                    />
+                  </a>
+                  <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                    {link.name}
+                  </span>
+                </div>
+              );
+            })
+          }
           <ThemeToggle/>
         </div>
       </div>
@@ -143,23 +145,25 @@ const Navbar = () => {
               </a>
             </nav>
             <div className="flex pt-2 pb-4 justify-center space-x-5">
-              {NavLinks.map((social) => {
-                const Icon = social.icon;
+              {
+                NAV_LINKS.map((link) => {
+                  const Icon = link.icon;
 
-                return (
-                  <div key={social.id} className="relative">
-                    <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
-                      <Icon
-                        size={social.size}
-                        className={`${theme === "dark" ? "text-white" : "text-black"}`}
-                      />
-                    </a>
-                    <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
-                      {social.name}
-                    </span>
-                  </div>
-                );
-              })}
+                  return (
+                    <div key={link.id} className="relative">
+                      <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name} className="peer">
+                        <Icon
+                          size={link.size}
+                          className={`${theme === "dark" ? "text-white" : "text-black"}`}
+                        />
+                      </a>
+                      <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                        {link.name}
+                      </span>
+                    </div>
+                  );
+                })
+              }
             </div>
           </motion.div>
         )}
