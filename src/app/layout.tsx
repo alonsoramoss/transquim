@@ -1,4 +1,5 @@
 import { Montserrat } from "next/font/google";
+import { Metadata } from "next";
 import ClientThemeWrapper from "@/components/utils/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
@@ -7,50 +8,70 @@ import "@/styles/globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "Transformaciones Químicas del Perú",
+  description: "TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
+  authors: [{ name: "Alonso Ramos", url: "https://alonsoramos.netlify.app" }],
+  creator: "Alonso Ramos",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  verification: {
+    google: "tUbG3Yc-yQvaSMjgz4wvH2WVo2JWFF2DRewB0Js1DB8",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Transformaciones Químicas del Perú",
+    description: "TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
+    url: "https://transquim.vercel.app",
+    siteName: "Transformaciones Químicas del Perú",
+    images: [
+      {
+        url: "https://transquim.vercel.app/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "TRANSQUIM",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Transformaciones Químicas del Perú",
+    description: "TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
+    images: ["https://transquim.vercel.app/og.jpg"],
+  },
+};
+
 export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="es">
-      <head>
-        <title>Transformaciones Químicas del Perú</title>
-        <meta name="description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
-        <meta name="author" content="Alonso Ramos" />
-        <meta name="creator" content="Alonso Ramos" />
-
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/android-chrome-192x192.png" />
-
-        <link rel="manifest" href="/site.webmanifest" />
-
-        <meta name="google-site-verification" content="tUbG3Yc-yQvaSMjgz4wvH2WVo2JWFF2DRewB0Js1DB8" />
-
-        <meta property="og:url" content="https://transquim.vercel.app" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Transformaciones Químicas del Perú" />
-        <meta property="og:description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
-        <meta property="og:image" content="https://transquim.vercel.app/og.jpg" />
-        <meta property="og:site_name" content="Transformaciones Químicas del Perú" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="transquim.vercel.app" />
-        <meta property="twitter:url" content="https://transquim.vercel.app" />
-        <meta name="twitter:title" content="Transformaciones Químicas del Perú" />
-        <meta name="twitter:description" content="TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura." />
-      </head>
-      <body suppressHydrationWarning className={`${montserrat.className} relative text-black dark:text-white overflow-y-scroll overflow-x-hidden min-h-screen flex flex-col`}>
+      <body className={`${montserrat.className} text-black dark:text-white flex flex-col min-h-screen`}>
         <ClientThemeWrapper>
           <div className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-50 dark:bg-neutral-950
             dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
             <DecorativeImages />
           </div>
           <Navbar />
-          <div className="flex-grow">
+          <main className="flex-1 flex flex-col">
             {children}
-          </div>
+          </main>
           <Footer />
         </ClientThemeWrapper>
       </body>
