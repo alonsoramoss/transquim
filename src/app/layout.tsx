@@ -1,6 +1,6 @@
 import { Montserrat } from "next/font/google";
 import { Metadata } from "next";
-import ClientThemeWrapper from "@/components/utils/ClientThemeWrapper";
+import ClientThemeWrapper from "@/providers/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
