@@ -21,9 +21,11 @@ const ThemeToggle = () => {
   return (
     <div>
       <button
+        onClick={toggleTheme}
+        aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
         title={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
         className="p-2 rounded-full bg-neutral-800 dark:bg-neutral-200 text-lg"
-        onClick={toggleTheme}>
+      >
         {isDarkMode ? (
           <IoMoon className="text-white dark:text-black"/>
         ) : (

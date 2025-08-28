@@ -1,4 +1,4 @@
-import React, { MouseEvent, useCallback } from "react"
+import { MouseEvent, useCallback } from "react"
 import Image from "next/image"
 
 interface MarketCardProps {
@@ -55,10 +55,10 @@ const MarketCard: React.FC<MarketCardProps> = ({ width, height, src, alt, LinkMa
         transform: `perspective(1000px) scale3d(1, 1, 1)`,
         transition: "all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
       }}>
-      <a href={LinkMarket} target="_blank" rel="noopener" className="block h-full w-full">
+      <a href={LinkMarket} target="_blank" rel="noopener noreferrer" className="block h-full w-full" aria-label="Visitar tienda en línea" title="Ir a la tienda en línea">
         <span className="absolute inset-[-50%] bg-gradient-conic animate-spin" />
-        <div className="relative h-full w-full items-center justify-center rounded-xl">
-          <Image src={src} alt={alt} width={2000} height={913} className="rounded-xl pointer-events-none"/>
+        <div className="relative h-full w-full items-center justify-center">
+          <Image src={src} alt={alt} width={2000} height={913} className="rounded-xl"/>
         </div>
       </a>
     </div>

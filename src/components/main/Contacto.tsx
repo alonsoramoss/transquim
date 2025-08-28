@@ -25,14 +25,14 @@ const Contacto = () => {
             <div className="text-start md:text-center">
               <h2 className="mb-1">Nuestras Redes</h2>
               <div className="flex flex-row items-center justify-start md:justify-center gap-4">
-                <a href="https://www.facebook.com/transquim" target="_blank" rel="noopener">
-                  <Image src="/svg/facebook.svg" alt="facebook" width={30} height={30} className="pointer-events-none"/>
+                <a href="https://www.facebook.com/transquim" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de TRANSQUIM en Facebook">
+                  <Image src="/svg/facebook.svg" alt="Facebook" width={30} height={30} />
                 </a>
-                <a href="https://www.instagram.com/yara_chocolates" target="_blank" rel="noopener">
-                  <Image src="/svg/instagram.svg" alt="instagram" width={30} height={30} className="pointer-events-none"/>
+                <a href="https://www.instagram.com/yara_chocolates" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de Yara Chocolates en Instagram">
+                  <Image src="/svg/instagram.svg" alt="Instagram" width={30} height={30} />
                 </a>
-                <a href="https://www.linkedin.com/company/transformaciones-qu%C3%ADmicas-del-per%C3%BA-sac" target="_blank" rel="noopener">
-                  <Image src="/svg/linkedin.svg" alt="linkedin" width={30} height={30} className="pointer-events-none"/>
+                <a href="https://www.linkedin.com/company/transformaciones-qu%C3%ADmicas-del-per%C3%BA-sac" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de TRANSQUIM en LinkedIn">
+                  <Image src="/svg/linkedin.svg" alt="LinkedIn" width={30} height={30} />
                 </a>
               </div>
             </div>
