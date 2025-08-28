@@ -1,18 +1,19 @@
+import type { NavLink } from "@/types/navLink";
 import { Store, ShoppingCart } from "lucide-react";
 
-export const NavLinks = [
+export const NAV_LINKS: NavLink[] = [
   {
     id: "tienda",
     name: "Tienda",
-    icon: Store,
     url: "https://transquim.com",
+    icon: Store,
     size: 30,
   },
   {
     id: "productos",
     name: "Productos",
-    icon: ShoppingCart,
     url: "https://transquim.com/collections/all",
+    icon: ShoppingCart,
     size: 30,
   },
 ];
