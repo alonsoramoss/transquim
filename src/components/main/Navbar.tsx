@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
-import Image from "next/image"
 import ThemeToggle from "../sub/ThemeToggle"
 import { Sora } from "next/font/google"
 import { NavLinks } from "@/constants/index"
@@ -84,120 +83,116 @@ const Navbar = () => {
   }, [hasScrolled]);
 
   return (
-    <>
-      <div
-        className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
-        <div className="max-w-[1440px] h-full flex items-center justify-between mx-auto px-5">
-          <div className="hidden md:flex items-center md:space-x-2">
-            <a href="/">
-              <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className="pointer-events-none"/>
+    <div className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+      <div className="max-w-[1440px] h-full flex items-center justify-between mx-auto px-5">
+        <div className="hidden md:flex items-center md:space-x-2">
+          <a href="/" aria-label="Ir al inicio">
+            <img src="/img/transquim.webp" alt="TRANSQUIM" width={60} height={60} />
+          </a>
+        </div>
+
+        <div className="flex md:hidden items-center justify-between w-full">
+          <ThemeToggle/>
+          <div className="flex items-center justify-center flex-grow">
+            <a href="/" aria-label="Ir al inicio">
+              <img src="/img/transquim.webp" alt="TRANSQUIM" width={60} height={60} />
             </a>
-          </div>
-
-          <div className="flex md:hidden items-center justify-between w-full">
-            <ThemeToggle/>
-            <div className="flex items-center justify-center flex-grow">
-              <a href="/">
-                <Image src="/img/transquim.webp" alt="logo" width={60} height={60} className="pointer-events-none"/>
-              </a>
-            </div>
-          </div>
-
-          <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
-            <nav className={`${sora.className} flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ?"text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
-              <a href="#inicio" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "inicio")}>
-                INICIO
-              </a>
-              <a href="#market" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "market")}>
-                MARKET
-              </a>
-              <a href="#ubicacion" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "ubicacion")}>
-                UBICACIÓN
-              </a>
-              <a href="#contacto" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "contacto")}>
-                CONTACTO
-              </a>
-            </nav>
-          </div>
-
-          <button
-            aria-label="menu" ref={buttonRef}
-            className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
-            <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? "transform rotate-45 top-1/2" : "top-2"}`}></span>
-            <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? "opacity-0" : "top-1/2"}`}></span>
-            <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-500 ${isMenuOpen ? "transform -rotate-45 top-1/2" : "top-8"}`}></span>
-          </button>
-
-          <div className="hidden md:flex items-center space-x-5">
-            {NavLinks.map((social) => {
-              const Icon = social.icon;
-              
-              return (
-                <div key={social.id} className="relative">
-                  <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
-                    <Icon
-                      size={social.size}
-                      className={`${!hasScrolled ? "text-white" : theme === "dark" ? "text-white" : "text-black"}`}
-                    />
-                  </a>
-                  <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
-                    {social.name}
-                  </span>
-                </div>
-              );
-            })}
-            <ThemeToggle/>
           </div>
         </div>
 
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              ref={menuRef}
-              key="mobile-menu"
-              variants={slideInFromTop}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden">
-              <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
-                <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "inicio"); closeMenu(); }}>
-                  INICIO
-                </a>
-                <a href="#market" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "market"); closeMenu(); }}>
-                  MARKET
-                </a>
-                <a href="#ubicacion" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "ubicacion"); closeMenu(); }}>
-                  UBICACIÓN
-                </a>
-                <a href="#contacto" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "contacto"); closeMenu(); }}>
-                  CONTACTO
-                </a>
-              </nav>
-              <div className="flex pt-2 pb-4 justify-center space-x-5">
-                {NavLinks.map((social) => {
-                  const Icon = social.icon;
+        <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
+          <nav className={`${sora.className} flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ?"text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
+            <a href="#inicio" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "inicio")}>
+              INICIO
+            </a>
+            <a href="#market" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "market")}>
+              MARKET
+            </a>
+            <a href="#ubicacion" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "ubicacion")}>
+              UBICACIÓN
+            </a>
+            <a href="#contacto" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "contacto")}>
+              CONTACTO
+            </a>
+          </nav>
+        </div>
 
-                  return (
-                    <div key={social.id} className="relative">
-                      <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
-                        <Icon
-                          size={social.size}
-                          className={`${theme === "dark" ? "text-white" : "text-black"}`}
-                        />
-                      </a>
-                      <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
-                        {social.name}
-                      </span>
-                    </div>
-                  );
-                })}
+        <button aria-label="Mostrar menú" ref={buttonRef} className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
+          <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-200 ${isMenuOpen ? "transform rotate-45 top-1/2" : "top-2"}`}></span>
+          <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-200 ${isMenuOpen ? "top-1/2 opacity-0" : "top-1/2"}`}></span>
+          <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-200 ${isMenuOpen ? "transform -rotate-45 top-1/2" : "top-8"}`}></span>
+        </button>
+
+        <div className="hidden md:flex items-center space-x-5">
+          {NavLinks.map((social) => {
+            const Icon = social.icon;
+            
+            return (
+              <div key={social.id} className="relative">
+                <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
+                  <Icon
+                    size={social.size}
+                    className={`${!hasScrolled ? "text-white" : theme === "dark" ? "text-white" : "text-black"}`}
+                  />
+                </a>
+                <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                  {social.name}
+                </span>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            );
+          })}
+          <ThemeToggle/>
+        </div>
       </div>
-    </>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            ref={menuRef}
+            key="mobile-menu"
+            variants={slideInFromTop}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.1 }}
+            exit="hidden"
+            className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden">
+            <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
+              <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "inicio"); closeMenu(); }}>
+                INICIO
+              </a>
+              <a href="#market" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "market"); closeMenu(); }}>
+                MARKET
+              </a>
+              <a href="#ubicacion" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "ubicacion"); closeMenu(); }}>
+                UBICACIÓN
+              </a>
+              <a href="#contacto" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "contacto"); closeMenu(); }}>
+                CONTACTO
+              </a>
+            </nav>
+            <div className="flex pt-2 pb-4 justify-center space-x-5">
+              {NavLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <div key={social.id} className="relative">
+                    <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name} className="peer">
+                      <Icon
+                        size={social.size}
+                        className={`${theme === "dark" ? "text-white" : "text-black"}`}
+                      />
+                    </a>
+                    <span role="tooltip" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-opacity duration-300 peer-hover:opacity-100 peer-focus-visible:opacity-100 text-xs bg-black text-white rounded-md px-2 py-1">
+                      {social.name}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
