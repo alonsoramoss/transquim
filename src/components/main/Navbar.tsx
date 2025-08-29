@@ -1,9 +1,9 @@
 "use client";
 
+import { Sora } from "next/font/google"
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
 import ThemeToggle from "../sub/ThemeToggle"
-import { Sora } from "next/font/google"
 import { NAV_LINKS } from "@/constants/navLinks"
 import { AnimatePresence, motion } from "framer-motion"
 import { slideInFromTop } from "@/utils/motion"
@@ -12,10 +12,10 @@ const sora = Sora({ subsets: ["latin"] });
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const { theme } = useTheme();
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -101,7 +101,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
-          <nav className={`${sora.className} flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ?"text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
+          <nav className={`${sora.className} flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ? "text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
             <a href="#inicio" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "inicio")}>
               INICIO
             </a>
@@ -155,8 +155,8 @@ const Navbar = () => {
             variants={slideInFromTop}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.1 }}
             exit="hidden"
+            transition={{ duration: 0.1 }}
             className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden">
             <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
               <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "inicio"); closeMenu(); }}>
