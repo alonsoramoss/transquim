@@ -4,6 +4,7 @@ import ClientThemeWrapper from "@/providers/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import { Analytics } from "@vercel/analytics/next"
 import "@/styles/globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: {
           </main>
           <Footer />
         </ClientThemeWrapper>
+        <Analytics />
       </body>
     </html>
   );
