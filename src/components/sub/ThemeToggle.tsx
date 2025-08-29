@@ -1,39 +1,26 @@
-import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { IoMoon, IoSunny } from "react-icons/io5"
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme()
   
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
-  const isDarkMode = theme === "dark";
+  const isDarkMode = theme === "dark"
 
   const toggleTheme = () => {
-    setTheme(isDarkMode ? "light" : "dark");
-  };
+    setTheme(isDarkMode ? "light" : "dark")
+  }
 
   return (
-    <div>
-      <button
-        onClick={toggleTheme}
-        aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-        title={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-        className="p-2 rounded-full bg-neutral-800 dark:bg-neutral-200 text-lg"
-      >
-        {isDarkMode ? (
-          <IoMoon className="text-white dark:text-black"/>
-        ) : (
-          <IoSunny className="text-white dark:text-black"/>
-        )}
-      </button>
-    </div>
-  );
-};
+    <button
+      onClick={toggleTheme}
+      aria-label={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+      title={isDarkMode ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+      className="p-2 rounded-full bg-neutral-800 dark:bg-neutral-200 text-lg"
+    >
+      <IoSunny className="block dark:hidden text-white" />
+      <IoMoon className="hidden dark:block text-black" />
+    </button>
+  )
+}
 
-export default ThemeToggle;
+export default ThemeToggle
