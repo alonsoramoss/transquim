@@ -34,6 +34,7 @@ export default function Component() {
     speed: 800,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
+    swipeToSlide: true,
     autoplay: true,
     autoplaySpeed: 3000,
   }
