@@ -1,13 +1,10 @@
 "use client"
 
-import { Sora } from "next/font/google"
 import { useState, useEffect } from "react"
 import Slider from "react-slick"
 import { MARCAS } from "@/constants/marcas"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-
-const sora = Sora({ subsets: ["latin"] })
 
 export default function Component() {
   const [slidesToShow, setSlidesToShow] = useState(3)
@@ -42,7 +39,7 @@ export default function Component() {
   return (
     <div className="flex flex-col items-center mx-auto py-20 px-0 md:px-5 max-w-[1440px]">
       <article className="w-full bg-gradient-to-t from-[#00ffdd] to-[#0009b8] dark:from-[#38b1a1] dark:to-[#070d76] py-10 md:py-16 md:rounded-2xl">
-        <h1 className={`${sora.className} text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500`}>
+        <h1 className="font-heading text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">
           MARCAS
         </h1>
         <p className="text-lg md:text-xl font-bold text-center text-white py-8">

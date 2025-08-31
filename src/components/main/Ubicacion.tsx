@@ -1,12 +1,9 @@
-import { Sora } from "next/font/google"
 import Map from "../sub/Map";
-
-const sora = Sora({ subsets: ["latin"] });
 
 const Ubicacion = () => {
   return (
     <div className="flex flex-col items-center text-center pt-20" id="ubicacion">
-      <h1 className={`${sora.className} text-4xl md:text-5xl pt-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700`}>
+      <h1 className="font-heading text-4xl md:text-5xl pt-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700">
         UBÍCANOS
       </h1>
       <div className="h-1 w-32 mt-4 md:my-8 bg-indigo-500 animate-pulse rounded"/>
