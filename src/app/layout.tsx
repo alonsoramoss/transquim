@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat, Sora } from "next/font/google";
 import { Metadata } from "next";
 import ClientThemeWrapper from "@/providers/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
@@ -7,7 +7,9 @@ import Footer from "@/components/main/Footer";
 import { Analytics } from "@vercel/analytics/next"
 import "@/styles/globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
+
 
 export const metadata: Metadata = {
   title: "Transformaciones Químicas del Perú",
@@ -60,8 +62,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body className={`${montserrat.className} flex flex-col min-h-screen`}>
+    <html lang="es" suppressHydrationWarning className={`${montserrat.variable} ${sora.variable}`}>
+      <body className="font-body flex flex-col min-h-screen">
         <ClientThemeWrapper>
           <div className="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-50 dark:bg-neutral-950
             dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
