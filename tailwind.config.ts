@@ -9,6 +9,10 @@ const config: Config = {
 	darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        body: ['var(--font-montserrat)', 'sans-serif'],
+        heading: ['var(--font-sora)', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, #4912a1, #0000ff, #000080)',
       },
