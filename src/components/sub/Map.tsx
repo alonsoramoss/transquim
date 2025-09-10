@@ -4,7 +4,7 @@ import { transquimGeoJSON } from "@/constants/geoJSONData";
 const Map = () => {
   return (
     <div className="m-auto flex max-w-5xl flex-row flex-wrap gap-8">
-      <div className="relative h-[630px] min-w-[300px] flex-1 overflow-hidden rounded-[1rem] bg-blue-800">
+      <div className="relative h-[630px] min-w-[300px] flex-1 overflow-hidden rounded-2xl bg-blue-800">
         <LeafletMap
           latitude={-12.037166508758972}
           longitude={-77.03674662223578}

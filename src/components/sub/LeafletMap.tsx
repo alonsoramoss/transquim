@@ -143,7 +143,7 @@ const LeafletMap = ({ latitude, longitude, zoom, tileLayer, attribution, geoJSON
   return (
     <div
       ref={containerRef}
-      className="block h-full w-full z-0 rounded-[1rem]"
+      className="block h-full w-full z-0 rounded-2xl"
     />
   )
 }
