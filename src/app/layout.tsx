@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import ClientThemeWrapper from "@/providers/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
 import { Analytics } from "@vercel/analytics/next"
+import Footer from "@/components/main/Footer";
+import WhatsApp from "@/components/sub/WhatsApp";
 import "@/styles/globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" });
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Analytics />
           </main>
           <Footer />
+          <WhatsApp />
         </ClientThemeWrapper>
       </body>
     </html>
