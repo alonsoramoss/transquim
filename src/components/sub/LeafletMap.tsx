@@ -95,7 +95,6 @@ const LeafletMap = ({ latitude, longitude, zoom, tileLayer, attribution, geoJSON
     a.leaflet-control-zoom-out:hover {
       background-color: #0000ff;
       color: white;
-      border-color: #e6f0fa;
     }
   `
   document.head.appendChild(style)
