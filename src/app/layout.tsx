@@ -1,5 +1,5 @@
 import { Montserrat, Sora } from "next/font/google";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import ClientThemeWrapper from "@/providers/ClientThemeWrapper";
 import DecorativeImages from "@/components/sub/DecorativeImages";
 import Navbar from "@/components/main/Navbar";
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
         url: "https://transquim.vercel.app/og.jpg",
         width: 1200,
         height: 630,
-        alt: "TRANSQUIM",
+        alt: "Transformaciones Químicas del Perú"
       },
     ],
     type: "website",
@@ -57,6 +57,9 @@ export const metadata: Metadata = {
     title: "Transformaciones Químicas del Perú",
     description: "TRANSQUIM es una empresa peruana con más de 35 años de experiencia, dedicada a ofrecer productos y soluciones en los sectores de salud, alimentación, cuidado personal, limpieza y agricultura.",
     images: ["https://transquim.vercel.app/og.jpg"],
+  },
+  alternates: {
+    canonical: "https://transquim.vercel.app",
   },
 };
 
@@ -72,10 +75,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <main className="flex-1 flex flex-col">
             {children}
+            <Analytics />
           </main>
           <Footer />
         </ClientThemeWrapper>
-        <Analytics />
       </body>
     </html>
   );
