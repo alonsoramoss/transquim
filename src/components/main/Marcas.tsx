@@ -6,7 +6,7 @@ import { MARCAS } from "@/constants/marcas"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-export default function Component() {
+export default function Marcas() {
   const [slidesToShow, setSlidesToShow] = useState(3)
 
   useEffect(() => {
