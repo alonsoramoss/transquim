@@ -3,7 +3,7 @@ import { IconCertificate, IconShieldCheck, IconUsersGroup, IconLeaf } from "@tab
 const HeroDownContent=()=> {
   return (
     <div className="h-full w-full flex flex-col items-center max-w-[1440px] px-5 py-20 mx-auto">
-      <p className="text-center text-3xl md:text-4xl lg:text-5xl font-bold py-16 md:py-20">
+      <p id="nosotros" className="text-center text-3xl md:text-4xl lg:text-5xl font-bold py-16 md:py-20">
         ¿Por qué elegir <strong className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700">TRANSQUIM</strong>?
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
