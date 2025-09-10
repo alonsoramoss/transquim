@@ -99,8 +99,8 @@ const Navbar = () => {
 
         <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
           <nav className={`font-heading flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ? "text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
-            <a href="#inicio" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "inicio")}>
-              INICIO
+            <a href="#nosotros" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "nosotros")}>
+              NOSOTROS
             </a>
             <a href="#market" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "market")}>
               MARKET
@@ -156,16 +156,16 @@ const Navbar = () => {
             transition={{ duration: 0.1 }}
             className="absolute right-0 top-20 w-40 bg-[#ff8000] text-white md:hidden">
             <nav className="flex flex-col items-center text-neutral-950 dark:text-neutral-50">
-              <a href="#inicio" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "inicio"); closeMenu(); }}>
-                INICIO
+              <a href="#nosotros" className="link font-medium text-sm pt-4 pb-2" onClick={(e) => { handleLinkClick(e, "nosotros") }}>
+                NOSOTROS
               </a>
-              <a href="#market" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "market"); closeMenu(); }}>
+              <a href="#market" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "market") }}>
                 MARKET
               </a>
-              <a href="#ubicacion" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "ubicacion"); closeMenu(); }}>
+              <a href="#ubicacion" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "ubicacion") }}>
                 UBICACIÓN
               </a>
-              <a href="#contacto" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "contacto"); closeMenu(); }}>
+              <a href="#contacto" className="link font-medium text-sm py-2" onClick={(e) => { handleLinkClick(e, "contacto") }}>
                 CONTACTO
               </a>
             </nav>
