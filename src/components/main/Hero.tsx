@@ -4,10 +4,10 @@ import HeroDownContent from "../sub/HeroDownContent"
 
 const Hero = () => {
   return (
-    <div id="inicio">
+    <section id="inicio">
       <HeroUpContent/>
       <HeroDownContent/>
-    </div>
+    </section>
   );
 };
 
