@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Navbar404 from "@/components/main/Navbar404";
 import Link from "next/link";
 
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
         url: "https://transquim.vercel.app/og.jpg",
         width: 1200,
         height: 630,
+        alt: "Transformaciones Químicas del Perú"
       },
     ],
     type: "website",
