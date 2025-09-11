@@ -1,17 +1,40 @@
 "use client";
 
+import { useRouter, usePathname } from "next/navigation"
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
+import { scrollToId } from "@/utils/scroll"
 import ThemeToggle from "../sub/ThemeToggle"
 import { NAV_LINKS } from "@/constants/navLinks"
 import { AnimatePresence, motion } from "framer-motion"
 import { slideInFromTop } from "@/utils/motion"
 
-const Navbar = () => {
+const Navbar404 = () => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { theme } = useTheme();
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.location.pathname === "/") {
+        router.replace("/", { scroll: false })
+        if (window.location.hash) {
+          const targetId = window.location.hash.substring(1)
+          setTimeout(() => scrollToId(targetId), 100)
+        }
+      } else {
+        router.replace(window.location.pathname, { scroll: false })
+      }
+    }
+
+    window.addEventListener("popstate", handlePopState)
+    return () => {
+      window.removeEventListener("popstate", handlePopState)
+    }
+  }, [router])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,14 +46,27 @@ const Navbar = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      const yOffset = -75;
-      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+
+    if (pathname !== "/") {
+      window.history.pushState({}, "", window.location.pathname);
+      setTimeout(() => {
+        router.push("/", { scroll: false })
+        requestAnimationFrame(() => scrollToId(targetId))
+      }, 0)
       closeMenu();
+      return;
     }
+
+    scrollToId(targetId);
+    closeMenu();
   };
+
+  useEffect(() => {
+    if (pathname === "/" && window.location.hash) {
+      const targetId = window.location.hash.substring(1);
+      scrollToId(targetId);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -169,4 +205,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar404;
