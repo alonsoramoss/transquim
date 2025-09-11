@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
+import { scrollToId } from "@/utils/scroll"
 import ThemeToggle from "../sub/ThemeToggle"
 import { NAV_LINKS } from "@/constants/navLinks"
 import { AnimatePresence, motion } from "framer-motion"
@@ -24,13 +25,8 @@ const Navbar = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
     e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      const yOffset = -75;
-      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-      closeMenu();
-    }
+    scrollToId(targetId);
+    closeMenu();
   };
 
   useEffect(() => {
