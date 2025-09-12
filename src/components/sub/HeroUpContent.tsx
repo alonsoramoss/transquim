@@ -30,7 +30,7 @@ export default function HeroUpContent() {
   }, [])
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
       {images.map((image, index) => (
         <div key={image} className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${index === currentImageIndex ? "opacity-100" : "opacity-0"}`}
           style={{ backgroundImage: `url(${image})`, objectFit: "contain" }}/>
@@ -68,6 +68,6 @@ export default function HeroUpContent() {
         </div>
         <DownArrow/>
       </div>
-    </div>
+    </section>
   )
 }

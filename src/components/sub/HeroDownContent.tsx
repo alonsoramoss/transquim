@@ -2,7 +2,7 @@ import { IconCertificate, IconShieldCheck, IconUsersGroup, IconLeaf } from "@tab
 
 const HeroDownContent=()=> {
   return (
-    <div className="h-full w-full flex flex-col items-center max-w-[1440px] px-5 py-20 mx-auto">
+    <section className="h-full w-full flex flex-col items-center max-w-[1440px] px-5 py-20 mx-auto">
       <p id="nosotros" className="text-center text-3xl md:text-4xl lg:text-5xl font-bold py-16 md:py-20">
         ¿Por qué elegir <strong className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-700">TRANSQUIM</strong>?
       </p>
@@ -39,7 +39,7 @@ const HeroDownContent=()=> {
           <p>Trabajamos de manera ética y sostenible, comprometidos con prácticas de producción responsables con el medio ambiente.</p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
