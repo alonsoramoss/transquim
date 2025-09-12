@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import Navbar404 from "@/components/main/Navbar404";
-import Link from "next/link";
+import type { Metadata } from "next"
+import Navbar404 from "@/components/main/Navbar404"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Página no encontrada - Transformaciones Químicas del Perú",
@@ -36,14 +36,14 @@ export default function NotFound() {
   return (
     <>
       <Navbar404/>
-      <div className="flex-1 flex items-center justify-center text-center pt-24 px-4">
+      <div className="flex-1 flex items-center justify-center text-center pt-20 px-4">
         <div className="max-w-xl md:max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-4"> Error 404 </h1>
           <p className="text-lg md:text-2xl font-medium mb-4"> Página no encontrada </p>
           <p className="text-base md:text-lg mb-6">
             ¡Hola! No hemos encontrado lo que buscabas. Verifica que la URL sea correcta o usa el botón de abajo para volver a nuestro sitio web.
           </p>
-          <Link href="/" className="inline-block bg-blue-600 text-white hover:bg-blue-800 font-semibold py-2.5 px-5 rounded-full transition-colors duration-300">
+          <Link href="/" className="inline-block text-white bg-blue-600 hover:bg-blue-700 font-semibold py-2.5 px-5 rounded-md transition-colors duration-300">
             Volver al inicio
           </Link>
         </div>
