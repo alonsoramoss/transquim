@@ -88,8 +88,8 @@ const Navbar404 = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-full h-20 fixed top-0 transition-colors duration-300 z-50 px-5 bg-[#ff8000] backdrop-blur-md shadow-lg">
-      <div className="w-full h-full flex items-center justify-between mx-auto">
+    <div className="w-full h-20 fixed top-0 transition-colors duration-300 z-50 bg-[#ff8000] backdrop-blur-md shadow-lg">
+      <div className="max-w-[1440px] h-full flex items-center justify-between mx-auto px-5">
         <div className="hidden md:flex items-center md:space-x-2">
           <a href="/" aria-label="Ir al inicio">
             <img src="/img/transquim.webp" alt="TRANSQUIM" width={60} height={60} />
