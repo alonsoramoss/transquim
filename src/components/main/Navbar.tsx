@@ -76,7 +76,7 @@ const Navbar = () => {
   }, [hasScrolled]);
 
   return (
-    <div className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+    <header className={`w-full h-20 fixed top-0 transition-colors duration-300 z-50 ${hasScrolled ? "bg-[#ff8000] backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
       <div className="max-w-[1440px] h-full flex items-center justify-between mx-auto px-5">
         <div className="hidden md:flex items-center md:space-x-2">
           <a href="/" aria-label="Ir al inicio">
@@ -93,8 +93,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
-          <nav className={`font-heading flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ? "text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
+        <nav className="hidden md:flex md:w-[500px] h-full items-center justify-between mx-16">
+          <div className={`font-heading flex items-center justify-between w-full h-auto px-5 ${hasScrolled ? (theme === "dark" ? "text-neutral-50" : "text-neutral-950") : "text-neutral-50"}`}>
             <a href="#nosotros" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "nosotros")}>
               NOSOTROS
             </a>
@@ -107,8 +107,8 @@ const Navbar = () => {
             <a href="#contacto" className="link font-medium text-sm" onClick={(e) => handleLinkClick(e, "contacto")}>
               CONTACTO
             </a>
-          </nav>
-        </div>
+          </div>
+        </nav>
 
         <button aria-label="Mostrar menú" ref={buttonRef} className="relative flex flex-col w-10 h-10 bg-transparent justify-center items-center gap-2 md:hidden" onClick={toggleMenu}>
           <span className={`absolute bg-blue-700 dark:bg-blue-600 h-0.5 w-full rounded transition-all duration-200 ${isMenuOpen ? "transform rotate-45 top-1/2" : "top-2"}`}></span>
@@ -189,7 +189,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </header>
   );
 };
 
