@@ -6,14 +6,12 @@ import Contacto from "@/components/main/Contacto"
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <Hero/>
-        <Marcas/>
-        <Market/>
-        <Ubicacion/>
-        <Contacto/>
-      </div>
-    </main>
+    <>
+      <Hero/>
+      <Marcas/>
+      <Market/>
+      <Ubicacion/>
+      <Contacto/>
+    </>
   );
 }
