@@ -36,10 +36,10 @@ export default function NotFound() {
   return (
     <>
       <Navbar404/>
-      <div className="flex-1 flex items-center justify-center text-center pt-20 px-4">
+      <main className="flex-1 flex items-center justify-center text-center pt-20 px-4">
         <div className="max-w-xl md:max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-4"> Error 404 </h1>
-          <p className="text-lg md:text-2xl font-medium mb-4"> Página no encontrada </p>
+          <h2 className="text-lg md:text-2xl font-medium mb-4"> Página no encontrada </h2>
           <p className="text-base md:text-lg mb-6">
             ¡Hola! No hemos encontrado lo que buscabas. Verifica que la URL sea correcta o usa el botón de abajo para volver a nuestro sitio web.
           </p>
@@ -47,7 +47,7 @@ export default function NotFound() {
             Volver al inicio
           </Link>
         </div>
-      </div>
+      </main>
     </>
   );
 }
