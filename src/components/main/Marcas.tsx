@@ -39,9 +39,9 @@ export default function Marcas() {
   return (
     <section className="flex flex-col items-center w-full max-w-[1440px] mx-auto py-20 px-0 md:px-5">
       <div className="w-full md:rounded-2xl py-10 md:py-16 bg-gradient-to-t from-[#00ffdd] to-[#0009b8] dark:from-[#38b1a1] dark:to-[#070d76]">
-        <h1 className="font-heading text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">
+        <h2 className="font-heading text-5xl md:text-7xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">
           MARCAS
-        </h1>
+        </h2>
         <p className="text-lg md:text-xl font-bold text-center text-white py-8">
           ¡Explora nuestras marcas y productos!
         </p>
