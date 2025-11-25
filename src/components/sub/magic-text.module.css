@@ -1,0 +1,60 @@
+.magic {
+    position: relative;
+}
+
+.magicStar {
+    --size: clamp(20px, 1.5vw, 30px);
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: var(--star-top);
+    left: var(--star-left);
+    animation: scale 700ms ease forwards;
+}
+
+.magicStar svg {
+    animation: rotate 1000ms linear infinite;
+    opacity: 0.7;
+    display: block;
+}
+
+.magicStar path {
+    fill: #ff8000;
+}
+
+.magicText {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right, #383acf, #61e2e5, #383acf, #383acf);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* Animaciones */
+@keyframes scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: -200%;
+    }
+}
