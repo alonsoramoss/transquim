@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const WhatsApp = () => {
   const [showMessage, setShowMessage] = useState(false);
-  const whatsappMensaje = encodeURIComponent("¡Hola! Estoy interesado/a en los productos de TRANSQUIM. ¿Podría brindarme más información?");
+  const whatsappMensaje = encodeURIComponent("Hola estoy interesad@ en los productos de TRANSQUIM. ¿Podría brindarme más información?");
 
   useEffect(() => {
     const timer = setTimeout(() => setShowMessage(true), 3000)
