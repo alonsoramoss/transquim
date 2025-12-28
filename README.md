@@ -2,7 +2,7 @@
 
 Este proyecto es una landing page para TRANSQUIM, diseñada para presentar información sobre la empresa, sus marcas, tienda en línea, ubicación y canales de contacto.
 
-![transquim](https://github.com/user-attachments/assets/f0309582-d226-4720-b3bc-9e93352746ee)
+![transquim](https://github.com/user-attachments/assets/46ff54d9-b408-488a-bd80-c3fc00d23326)
 
 ## Tecnologías
 
