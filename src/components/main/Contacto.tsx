@@ -12,14 +12,20 @@ const Contacto = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-8">
           <div>
-            📞 Telf: (511) 381 - 4246 <br /> 
-            📱 Cel: 936 572 969 | 976 179 379 <br />
+            📞 <strong>Telf: </strong>(511) 381 - 4246 <br /> 
+            📱 <strong>Cel: </strong>936 572 969 | 976 179 379 <br />
             <a href="mailto:transformaciones@slenderperu.com">
               ✉️ transformaciones@slenderperu.com
             </a>
           </div>
           <div>
-            <p>Para compras al por mayor, contactarse con +51 991 282 997</p>
+            <p>Para compras al por mayor, contactarse con&nbsp;
+              <a 
+                href="https://api.whatsapp.com/send?phone=51991282997&text=Hola%20estoy%20interesad%40%20en%20realizar%20una%20compra%20al%20por%20mayor" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para compras al por mayor" title="Contactar por WhatsApp para compras al por mayor"
+              >
+                <strong>+51 991 282 997</strong>
+              </a>
+            </p>
           </div>
           <div className="text-start md:text-center">
             <h2 className="mb-1">Nuestras Redes</h2>
